@@ -19,15 +19,21 @@ export default {
 } as Meta;
 
 export const Colors = (args: ButtonProps) => (
-  <div className="flex flex-col space-y-4 mt-8">
+  <div style={{
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+    gap:'1rem',
+  }}>
     <div>
       <Button {...args} color="primary">
-        Outlined
+        primary
       </Button>
     </div>
     <div>
       <Button {...args} color="secondary">
-        Filled
+        secondary
       </Button>
     </div>
   </div>
@@ -38,7 +44,13 @@ Colors.args = {
 };
 
 export const Variants = (args: ButtonProps) => (
-  <div className="flex flex-col space-y-4 mt-8">
+  <div style={{
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+    gap:'1rem',
+  }}>
     <div>
       <Button {...args} variant="outlined">
         Outlined
@@ -57,7 +69,13 @@ Variants.args = {
 };
 
 export const Sizes = (args: ButtonProps) => (
-  <div className="flex flex-col space-y-4 mt-8">
+  <div style={{
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+    gap:'1rem',
+  }}>
     <div>
       <Button {...args} size="sm">
         Small
