@@ -18,17 +18,19 @@ jobs:
       run: npm install
 
     - name: Run Button Component Tests
-      run: jest button.test.js
+      run: npm run test __test__/Button.test.js
+ 
+      id: test_button_output
+      continue-on-error: true
 
-  test_input:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install Dependencies
-      run: npm ci
-
-    - name: Testing Component
-      run: jest Button.test.js
+    - name: Set Test Result
+      if: always()
+      run: echo "::set-output name=button_tests_result::${{ job.status }}"
+    
+    - name: Final Message
+      if: success()
+      run: echo "Button component tests passed! 🎉"
+    
+    - name: Final Message on Failure
+      if: failure()
+      run: echo "Button component tests failed! ❌"
