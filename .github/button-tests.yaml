@@ -1,0 +1,34 @@
+name: Button-Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test_button:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Button Component Tests
+      run: jest button.test.js
+
+  test_input:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Testing Component
+      run: jest Button.test.js
