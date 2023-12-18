@@ -12,7 +12,13 @@ export const query = graphql`
 const InstallPage = ({data}) => {
   console.log(data);
   if (!data || !data.markdownRemark) {
-    return <div>Data not available</div>;
+    return <div>
+      <pre>
+      <code>
+      npm i enigma-ui-kit
+      </code>
+    </pre>
+    </div>;
   }
   const { markdownRemark } = data;
   const { html } = markdownRemark;

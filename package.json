@@ -13,12 +13,17 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "clipboard-copy": "^4.0.1",
     "gatsby": "^5.12.12",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-remark": "^6.13.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "repository": {
     "type": "git",
@@ -26,5 +31,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.11"
   }
 }

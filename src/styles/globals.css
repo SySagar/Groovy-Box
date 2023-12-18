@@ -6,3 +6,12 @@
 body {
     font-family: 'Inter', sans-serif;
   }
+
+  .access{
+    transition: all 0.4s ease-in-out;
+  }
+
+    .access:hover{
+        color: #881fff;
+        text-decoration: underline;
+    }

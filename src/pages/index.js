@@ -2,7 +2,8 @@ import * as React from "react";
 import "../styles/globals.css";
 import { ThemeProvider, useTheme } from "../theme/ThemeContext";
 import Rootlayout from "../layout/Rootlayout";
-import InstallPage from "../components/Install";
+import InstallPage from "../components/InstallPage";
+import Access from "../components/Access";
 
 export default function Home() {
   const theme = useTheme();
@@ -48,8 +49,25 @@ export default function Home() {
                   The official React UI library built by Enigma, VSSUT for
                   building blocks you need to build your React applications.
                 </h3>
-                <div style={{ marginTop: "50px", width: "100px" }}>
-                  <InstallPage />
+
+                <div
+                  className="meta-container"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginTop: "50px",
+                    gap: "2rem",
+                  }}
+                >
+                  <div>
+                    <InstallPage />
+                  </div>
+
+                  <div>
+                    <Access />
+                  </div>
                 </div>
               </div>
             </div>
