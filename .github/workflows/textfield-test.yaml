@@ -1,0 +1,36 @@
+name: Textfield-Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test_button:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Button Component Tests
+      run: npm run test __test__/Textfield.test.js
+ 
+      id: test_textField_output
+      continue-on-error: true
+
+    - name: Set Test Result
+      if: always()
+      run: echo "::set-output name=textField_tests_result::${{ job.status }}"
+    
+    - name: Final Message
+      if: success()
+      run: echo "TextField component tests passed! 🎉"
+    
+    - name: Final Message on Failure
+      if: failure()
+      run: echo "Textfield component tests failed! ❌"
