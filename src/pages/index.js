@@ -1,7 +1,6 @@
 import * as React from "react";
 import "../styles/globals.css";
-import { ThemeProvider, useTheme } from "../theme/ThemeContext";
-import Rootlayout from "../layout/Rootlayout";
+import { useTheme } from "../theme/ThemeContext";
 import InstallPage from "../components/InstallPage";
 import Access from "../components/Access";
 
@@ -10,8 +9,6 @@ export default function Home() {
 
   return (
     <div>
-      <ThemeProvider>
-        <Rootlayout>
           <div
             style={{
               display: "flex",
@@ -32,17 +29,17 @@ export default function Home() {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "20px",
+                  gap: "30px",
                   justifyContent: "center",
                   alignItems: "center",
                 }}
               >
-                <h1 style={{ color: "white", fontSize: "60px" }}>Enigma UI</h1>
+                <h1 className="text-white font-bold text-6xl">Enigma UI</h1>
                 <h3
+                className="font-mdeium text-xl"
                   style={{
                     width: "50vw",
                     textAlign: "center",
-                    fontWeight: "400",
                     color: theme.colors.text.secondary,
                   }}
                 >
@@ -72,8 +69,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </Rootlayout>
-      </ThemeProvider>
     </div>
   );
 }

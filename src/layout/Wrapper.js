@@ -21,6 +21,7 @@ const Wrapper = ({ children }) => {
     >
       {React.cloneElement(children)}
       <button
+      className="bg-white flex justify-center items-center "
         style={{
           height: "50px",
           width: "40px",
