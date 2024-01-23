@@ -3,12 +3,15 @@ import "../styles/globals.css";
 import { useTheme } from "../theme/ThemeContext";
 import InstallPage from "../components/InstallPage";
 import Access from "../components/Access";
+import Header from "../layout/header";
+import Footer from "../layout/Footer";
 
 export default function Home() {
   const theme = useTheme();
 
   return (
     <div>
+      <Header />
           <div
             style={{
               display: "flex",
@@ -69,6 +72,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+      <Footer />
     </div>
   );
 }
