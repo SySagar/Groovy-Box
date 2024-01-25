@@ -11,13 +11,12 @@ const textFieldArgs = {
 };
 
 describe('TextField Component', () => {
+  test('renders disabled TextField', () => {
+    render(<TextField disabled {...textFieldArgs} />);
+    const inputElement = screen.getByPlaceholderText('Placeholder');
 
-    test('renders disabled TextField', () => {
-        render(<TextField disabled {...textFieldArgs} />);
-        const inputElement = screen.getByPlaceholderText('Placeholder');
-    
-        expect(inputElement).toBeDisabled();
-      });
+    expect(inputElement).toBeDisabled();
+  });
 
   test('renders label and placeholder', () => {
     render(<TextField {...textFieldArgs} />);
@@ -46,14 +45,14 @@ describe('TextField Component', () => {
   test('renders read-only TextField', () => {
     render(<TextField readOnly {...textFieldArgs} />);
     const inputElement = screen.getByPlaceholderText('Placeholder');
-  
+
     expect(inputElement).toHaveAttribute('readonly');
   });
 
   test('renders required TextField', () => {
     render(<TextField required {...textFieldArgs} />);
     const inputElement = screen.getByPlaceholderText('Placeholder');
-  
+
     expect(inputElement).toBeRequired();
   });
 
@@ -61,19 +60,23 @@ describe('TextField Component', () => {
     const onKeyPressMock = jest.fn();
     render(<TextField onKeyPress={onKeyPressMock} {...textFieldArgs} />);
     const inputElement = screen.getByPlaceholderText('Placeholder');
-  
-    fireEvent.keyPress(inputElement, { key: 'Enter', code: 'Enter', charCode: 13 });
-  
+
+    fireEvent.keyPress(inputElement, {
+      key: 'Enter',
+      code: 'Enter',
+      charCode: 13,
+    });
+
     expect(onKeyPressMock).toHaveBeenCalledTimes(1);
   });
-  
+
   test('handles onKeyUp event', () => {
     const onKeyUpMock = jest.fn();
     render(<TextField onKeyUp={onKeyUpMock} {...textFieldArgs} />);
     const inputElement = screen.getByPlaceholderText('Placeholder');
-  
+
     fireEvent.keyUp(inputElement, { key: 'A', code: 'KeyA' });
-  
+
     expect(onKeyUpMock).toHaveBeenCalledTimes(1);
   });
 
@@ -81,10 +84,9 @@ describe('TextField Component', () => {
     const onKeyDownMock = jest.fn();
     render(<TextField onKeyDown={onKeyDownMock} {...textFieldArgs} />);
     const inputElement = screen.getByPlaceholderText('Placeholder');
-  
+
     fireEvent.keyDown(inputElement, { key: 'ArrowDown', code: 'ArrowDown' });
-  
+
     expect(onKeyDownMock).toHaveBeenCalledTimes(1);
   });
-  
 });

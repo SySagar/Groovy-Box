@@ -3,9 +3,9 @@ import { Meta } from '@storybook/react';
 import { TextField } from '../src';
 
 export default {
-    title: 'Components/TextField',
-    component: TextField,
-   argTypes: {
+  title: 'Components/TextField',
+  component: TextField,
+  argTypes: {
     variant: {
       options: ['filled', 'outlined', 'standard'],
       control: { type: 'radio' },
@@ -73,8 +73,8 @@ export default {
     onKeyDown: {
       control: { type: 'text' },
     },
-    },
-  } as Meta;
+  },
+} as Meta;
 
 export const Default = (args: any) => <TextField {...args} />;
 
@@ -175,4 +175,3 @@ export const Multiline = (args: any) => (
     </div>
   </div>
 );
-

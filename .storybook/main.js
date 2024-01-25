@@ -1,14 +1,18 @@
 module.exports = {
   stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
 
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials',{
-    name: '@storybook/addon-postcss',
-    options: {
-      postcssLoaderOptions: {
-        implementation: require('postcss'),
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
       },
     },
-  }],
+  ],
 
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {
@@ -16,11 +20,11 @@ module.exports = {
   },
 
   framework: {
-    name: "@storybook/react-webpack5",
-    options: {}
+    name: '@storybook/react-webpack5',
+    options: {},
   },
 
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };

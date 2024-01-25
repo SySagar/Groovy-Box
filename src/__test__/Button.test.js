@@ -1,8 +1,8 @@
 import React from 'react';
-import { render,screen } from '@testing-library/react';
-import { Button} from '../components/Button/index'
-import {Colors,Variants,Sizes} from '../../stories/Button.stories';
-import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react';
+import { Button } from '../components/Button/index';
+import { Colors, Variants, Sizes } from '../../stories/Button.stories';
+import '@testing-library/jest-dom';
 
 const argsColor = {
   variant: 'filled',
@@ -17,7 +17,7 @@ const args = {
 
 describe('Button Component', () => {
   test('renders without crashing', () => {
-    render(<Button/>);
+    render(<Button />);
   });
 
   //renders colors
@@ -49,5 +49,4 @@ describe('Button Component', () => {
     expect(mediumButton).toBeInTheDocument();
     expect(largeButton).toBeInTheDocument();
   });
-
 });

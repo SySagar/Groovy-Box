@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import { Button , ButtonProps } from '../src';
+import { Button, ButtonProps } from '../src';
 
 export default {
   title: 'Components/Button',
@@ -19,13 +19,15 @@ export default {
 } as Meta;
 
 export const Colors = (args: ButtonProps) => (
-  <div style={{
-    display:'flex',
-    flexDirection:'column',
-    justifyContent:'center',
-    alignItems:'center',
-    gap:'1rem',
-  }}>
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: '1rem',
+    }}
+  >
     <div>
       <Button {...args} color="primary">
         primary
@@ -44,13 +46,15 @@ Colors.args = {
 };
 
 export const Variants = (args: ButtonProps) => (
-  <div style={{
-    display:'flex',
-    flexDirection:'column',
-    justifyContent:'center',
-    alignItems:'center',
-    gap:'1rem',
-  }}>
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: '1rem',
+    }}
+  >
     <div>
       <Button {...args} variant="outlined">
         Outlined
@@ -69,13 +73,15 @@ Variants.args = {
 };
 
 export const Sizes = (args: ButtonProps) => (
-  <div style={{
-    display:'flex',
-    flexDirection:'column',
-    justifyContent:'center',
-    alignItems:'center',
-    gap:'1rem',
-  }}>
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: '1rem',
+    }}
+  >
     <div>
       <Button {...args} size="sm">
         Small
