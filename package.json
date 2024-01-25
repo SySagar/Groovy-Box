@@ -13,7 +13,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "release": "npm run build && npx changeset publish",
+    "release": "npm run build && npx changeset && npx changeset version && npx changeset publish",
     "test": "jest",
     "format": "prettier --write .",
     "lint": "tsdx lint",
