@@ -2,9 +2,9 @@ name: Button-Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ button ]
   pull_request:
-    branches: [ main ]
+    branches: [ button ]
 
 jobs:
   test_button:

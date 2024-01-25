@@ -2,9 +2,9 @@ name: Textfield-Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ textfield ]
   pull_request:
-    branches: [ main ]
+    branches: [ textfield ]
 
 jobs:
   test_button:
