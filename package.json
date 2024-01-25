@@ -13,6 +13,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
+    "release": "changeset publish",
     "test": "jest",
     "format": "prettier --write .",
     "lint": "tsdx lint",
