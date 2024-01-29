@@ -36,22 +36,18 @@ export const TextField: React.FC<textFieldProps> = ({
   size = 'md',
   type = 'text',
   label,
-  color,
+
   placeholder,
-  error,
+
   disabled,
   required,
   readOnly,
-  fullWidth,
-  multiline,
-  rows,
-  rowsMax,
+
   startIcon,
   endIcon,
   onChange,
   onClick,
-  onFocus,
-  onBlur,
+
   onKeyPress,
   onKeyUp,
   onKeyDown,
