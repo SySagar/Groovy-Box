@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "../../../../layout/header";
 import Footer from "../../../../layout/Footer";
+import {Button} from 'enigma-ui-kit'
 
-export default function Button() {
+export default function ButtonDocs() {
   return (
     <>
       <Header />
@@ -14,6 +15,13 @@ export default function Button() {
         }}
       >
         button
+
+        <Button
+        style={{
+          height: "fit-content",
+          width: "100px",
+        }}
+        >test</Button>
       </div>
       <Footer />
     </>
