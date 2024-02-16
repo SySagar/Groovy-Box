@@ -1,0 +1,6 @@
+.text{
+    display: -webkit-box!important; 
+    -webkit-box-orient: vertical!important; 
+    overflow: hidden; 
+    white-space: pre-wrap;
+}
