@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import { TextField } from '../src';
+import { TextField } from '../lib';
 
 export default {
   title: 'Components/TextField',

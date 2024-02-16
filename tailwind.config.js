@@ -1,8 +1,15 @@
+import plugin from 'tailwindcss/plugin';
+import customClasses from './tokens';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,ts,tsx,js,jsx}'],
+  content: ['./lib/**/*.{html,ts,tsx,js,jsx}'],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities(customClasses);
+    }),
+  ],
 };
