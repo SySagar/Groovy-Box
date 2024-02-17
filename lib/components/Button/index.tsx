@@ -28,16 +28,16 @@ export const Button: React.FC<ButtonProps> = ({
 
   const colorStyles = {
     primary: {
-      filled: 'bg-[#35FF1F] hover:bg-[#00C200] text-white',
+      filled: 'bg-[#30ff1a] hover:bg-[#00e600] text-white',
       outlined:
         'bg-transparent hover:bg-[#dcfce7] text-[#35FF1F] border-[#35FF1F] border focus:ring-[#00C200]',
       text: 'bg-transparent hover:bg-[#dcfce7] text-[#35FF1F]',
     },
     secondary: {
-      filled: 'bg-gray-500 hover:bg-gray-600 text-white',
+      filled: 'bg-[#404A3C] hover:bg-[#556250] text-white',
       outlined:
-        'bg-transparent hover:bg-gray-100 text-gray-500 border-gray-500 border',
-      text: 'bg-transparent hover:bg-gray-100 text-gray-500',
+        'bg-transparent hover:bg-[#e4e8e3] text-gray-500 border-gray-500 border',
+      text: 'bg-transparent hover:bg-[#e4e8e3] text-gray-500',
     },
   };
 
