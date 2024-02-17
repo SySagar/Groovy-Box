@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import { TextField } from '../components/Textfield'; // Update the import path
+import { TextField } from '../lib/components/Textfield';
 import '@testing-library/jest-dom';
 
 const textFieldArgs = {

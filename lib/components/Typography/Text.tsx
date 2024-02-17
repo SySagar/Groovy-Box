@@ -4,7 +4,7 @@ import { Slot } from './Slot';
 import style from './text.module.css';
 import clsx from 'clsx';
 export interface TextProps {
-  variant: keyof typeof VARIANT_MAPPINGS;
+  variant?: keyof typeof VARIANT_MAPPINGS;
   alignment?: 'left' | 'right' | 'center' | 'justify';
   color?: string;
   width?: number;
@@ -37,8 +37,10 @@ export const Text: React.FC<TextProps> = ({
   };
 
   const Comp = asChild ? Slot : 'p';
-  const classNames = VARIANT_MAPPINGS[variant];
-  const mergedClassess = clsx(style.text, classNames.slice(1));
+  const classNames = VARIANT_MAPPINGS[variant as keyof typeof VARIANT_MAPPINGS];
+  const mergedClassess = variant
+    ? clsx(style.text, classNames.slice(1))
+    : style.text;
 
   return (
     <div>
