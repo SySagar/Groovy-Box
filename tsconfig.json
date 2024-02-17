@@ -1,16 +1,17 @@
 {
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
-  "include": ["src", "types"],
+  "include": ["lib", "types", "token.ts", "__test__"],
   "compilerOptions": {
     "module": "esnext",
     "lib": ["dom", "esnext"],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "importHelpers": true,
     // output .d.ts declaration files for consumers
     "declaration": true,
     // output .js.map sourcemap files for consumers
     "sourceMap": true,
-    // match output dir to input dir. e.g. dist/index instead of dist/src/index
-    "rootDir": "./src",
+    // match output dir to input dir. e.g. dist/index instead of dist/lib/index
+    "rootDir": "./lib",
     // stricter type-checking for stronger correctness. Recommended by TS
     "strict": true,
     // linter checks for common issues
