@@ -37,7 +37,8 @@ export default function Home() {
                   alignItems: "center",
                 }}
               >
-                <h1 className="text-white font-bold text-6xl">Enigma UI</h1>
+                <p className="text-white font-bold w-2/3 text-center text-5xl">
+                  Beautifully crafted components for your next big front-end application.</p>
                 <h3
                 className="font-mdeium text-xl"
                   style={{
@@ -46,8 +47,7 @@ export default function Home() {
                     color: theme.colors.text.secondary,
                   }}
                 >
-                  The official React UI library built by Enigma, VSSUT for
-                  building blocks you need to build your React applications.
+                  The official React UI library built by Enigma, VSSUT
                 </h3>
 
                 <div
