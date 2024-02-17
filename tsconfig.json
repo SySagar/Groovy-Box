@@ -1,6 +1,6 @@
 {
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
-  "include": ["lib", "types", "token.ts"],
+  "include": ["lib", "types", "token.ts", "__test__"],
   "compilerOptions": {
     "module": "esnext",
     "lib": ["dom", "esnext"],
