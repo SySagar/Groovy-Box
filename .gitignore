@@ -3,9 +3,8 @@
 node_modules
 .cache
 dist
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
 .env
+.netlify
+storybook-static
+# Local Netlify folder
 .netlify
