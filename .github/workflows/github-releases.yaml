@@ -24,8 +24,6 @@ jobs:
         run: |
           npm install --frozen-lockfile
           npm run lint:ts && npm run build --if-present
-      - env:
-          CI: true
 
       - name: Extract Version from package.json
         run: |
