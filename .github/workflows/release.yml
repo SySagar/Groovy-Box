@@ -1,0 +1,55 @@
+name: Release and Tag
+
+on:
+  workflow_dispatch:
+    branches: [main]
+
+permissions:
+  contents: write  
+  pull-requests: write 
+
+jobs:
+  github-release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build, and test
+        run: |
+          npm install --frozen-lockfile
+          npm run lint:ts && npm run build --if-present
+      - env:
+          CI: true
+
+      - name: Extract Version from package.json
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "Extracted version: $VERSION"
+          echo "::set-output name=VERSION::$VERSION"
+
+      - name: Create Release
+        uses: actions/create-release@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
+        with:
+          tag_name: "v${{ steps.github-release.outputs.VERSION }}"
+          release_name: "Release v${{ steps.github-release.outputs.VERSION }}"
+          body: |
+            **Release Changes:**
+
+            ${{ contents.CHANGELOG.md }}  # Include Changelog content
+
+          draft: false  
+
+      - name: Create Version Tag
+        run: |
+          git tag "v${{ steps.github-release.outputs.VERSION }}"
+          git push origin "v${{ steps.github-release.outputs.VERSION }}"
+          echo "Pushed tag: v${{ steps.github-release.outputs.VERSION }}"
+
