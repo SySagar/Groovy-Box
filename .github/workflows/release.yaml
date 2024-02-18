@@ -1,4 +1,4 @@
-name: Release and Tag
+name: Github releases and tag
 
 on:
   workflow_dispatch:
