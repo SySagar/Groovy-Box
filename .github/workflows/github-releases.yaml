@@ -40,7 +40,8 @@ jobs:
           path: ./CHANGELOG.md
 
       - name: Create Release
-        uses: actions/create-release@v3
+        id: create_release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
         with:
@@ -52,6 +53,7 @@ jobs:
             ${{ steps.changelog_reader.outputs.changes }}  # Include Changelog content
 
           draft: false  
+          prerelease: false
 
       - name: Create Version Tag
         run: |
