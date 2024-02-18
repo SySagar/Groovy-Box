@@ -1,7 +1,7 @@
 import { create } from '@storybook/theming/create';
 
 export default create({
-  base: 'dark',
+  base: 'light',
   brandTitle: 'Enigma-UI',
   brandUrl: 'https://enigma-ui-docs.netlify.app/',
   brandImage:
@@ -14,11 +14,9 @@ export default create({
 
   //UI
   appBg: '#2E393F',
-  appContentBg: '#2E393F',
-  appPreviewBg: '#2E393F',
 
   // Text colors
-  textColor: '#ffffff',
+  textColor: '#BCC1C2',
   textInverseColor: '#10162F',
 
   // Toolbar default and active colors
@@ -28,6 +26,5 @@ export default create({
 
   // Form colors
   inputBg: '#ffffff',
-  inputBorder: '#10162F',
   inputTextColor: '#10162F',
 });
