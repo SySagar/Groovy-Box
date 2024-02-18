@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "watch": "vite & tcm --watch ./lib",
+    "watch": "tcm --watch ./lib",
     "check:up-to-date-types": "tcm --listDifferent ./lib",
     "build": "tsc && vite build",
     "release": "changeset publish",
@@ -28,11 +28,6 @@
   },
   "peerDependencies": {
     "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
   },
   "prettier": {
     "printWidth": 80,
