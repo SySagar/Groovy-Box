@@ -44,8 +44,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
         with:
-          tag_name: "v${{ steps.github-release.outputs.VERSION }}"
-          release_name: "Release v${{ steps.github-release.outputs.VERSION }}"
+          tag_name: "v${{ steps.github-releases.outputs.VERSION }}"
+          release_name: "Release v${{ steps.github-releases.outputs.VERSION }}"
           body: |
             **Release Changes:**
 
@@ -56,7 +56,7 @@ jobs:
 
       - name: Create Version Tag
         run: |
-          git tag "v${{ steps.github-release.outputs.VERSION }}"
-          git push origin "v${{ steps.github-release.outputs.VERSION }}"
-          echo "Pushed tag: v${{ steps.github-release.outputs.VERSION }}"
+          git tag "v${{ steps.github-releases.outputs.VERSION }}"
+          git push origin "v${{ steps.github-releases.outputs.VERSION }}"
+          echo "Pushed tag: v${{ steps.github-releases.outputs.VERSION }}"
 
