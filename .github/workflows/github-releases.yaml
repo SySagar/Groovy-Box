@@ -38,30 +38,30 @@ jobs:
           content=${content#*\#*}
           echo "::set-output name=changelog_content::$content"
 
-      - name: Print Output Values
+      - name: Example usage
         run: |
-          echo "VERSION: ${{ steps.github-releases.outputs.VERSION }}"
-          echo "CHANGELOG_CONTENT: ${{ steps.changelog_content.outputs.changelog_content }}"
+          echo "Version: ${{ steps.Extract_Version_from_package.json.outputs.VERSION }}"
+          echo "Changelog content: ${{ steps.Get_Changelog_Content.outputs.changelog_content }}"
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
-        with:
-          tag_name: "v${{ steps.github-releases.outputs.VERSION }}"
-          release_name: "Release v${{ steps.github-releases.outputs.VERSION }}"
-          body: |
-            **Release Changes:**
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
+      #   with:
+      #     tag_name: "v${{ steps.github-releases.outputs.VERSION }}"
+      #     release_name: "Release v${{ steps.github-releases.outputs.VERSION }}"
+      #     body: |
+      #       **Release Changes:**
 
-            ${{ steps.changelog_content.outputs.changelog_content }} 
+      #       ${{ steps.changelog_content.outputs.changelog_content }} 
 
-          draft: false  
-          prerelease: false
+      #     draft: false  
+      #     prerelease: false
 
-      - name: Create Version Tag
-        run: |
-          git tag "v${{ steps.github-releases.outputs.VERSION }}"
-          git push origin "v${{ steps.github-releases.outputs.VERSION }}"
-          echo "Pushed tag: v${{ steps.github-releases.outputs.VERSION }}"
+      # - name: Create Version Tag
+      #   run: |
+      #     git tag "v${{ steps.github-releases.outputs.VERSION }}"
+      #     git push origin "v${{ steps.github-releases.outputs.VERSION }}"
+      #     echo "Pushed tag: v${{ steps.github-releases.outputs.VERSION }}"
 
