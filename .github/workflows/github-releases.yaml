@@ -38,10 +38,10 @@ jobs:
           content=${content#*\#*}
           echo "::set-output name=changelog_content::$content"
 
-      - name: Example usage
+      - name: Print Output Values
         run: |
-          echo "Version: ${{ steps.Extract_Version_from_package.json.outputs.VERSION }}"
-          echo "Changelog content: ${{ steps.Get_Changelog_Content.outputs.changelog_content }}"
+          echo "VERSION: ${{ steps.github-release.outputs.VERSION }}"
+          echo "CHANGELOG_CONTENT: ${{ steps.github-release.outputs.changelog_content }}"
 
       # - name: Create Release
       #   id: create_release
