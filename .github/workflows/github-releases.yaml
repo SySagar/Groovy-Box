@@ -35,7 +35,7 @@ jobs:
       - name: Get Changelog Content (Modified)
         id: changelog
         run: |
-          content=$(awk '/^## 0\.1\.1$/,/^## .*/' CHANGELOG.md)
+          content=$(awk '/^###/{flag=1; next} /^##/{flag=0} flag' CHANGELOG.md)
           echo "::set-output name=changelog_content::$content"
 
       - name: Print Output Values
