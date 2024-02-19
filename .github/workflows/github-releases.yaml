@@ -35,9 +35,7 @@ jobs:
       - name: Get Changelog Content (Modified)
         id: changelog
         run: |
-          content=$(cat CHANGELOG.md | sed -n '/^## [^<]*$/,/^## \([^<]*\)$/p')
-          # Remove first line (heading)
-          content=${content#*\#*}
+          content=$(awk '/^## 0\.1\.1$/,/^## .*/' CHANGELOG.md)
           echo "::set-output name=changelog_content::$content"
 
       - name: Print Output Values
