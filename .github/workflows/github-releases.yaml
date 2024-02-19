@@ -44,25 +44,25 @@ jobs:
           echo "CHANGELOG_CONTENT: ${{ steps.changelog.outputs.CHANGELOG }}"
 
 
-      # - name: Create Release
-      #   id: create_release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
-      #   with:
-      #     tag_name: "v${{ steps.github-releases.outputs.VERSION }}"
-      #     release_name: "Release v${{ steps.github-releases.outputs.VERSION }}"
-      #     body: |
-      #       **Release Changes:**
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }} 
+        with:
+          tag_name: "v${{ steps.version.outputs.VERSION }}"
+          release_name: "Release v${{ steps.version.outputs.VERSION }}"
+          body: |
+            **Release Changes:**
 
-      #       ${{ steps.changelog_content.outputs.changelog_content }} 
+            ${{ steps.changelog.outputs.CHANGELOG }} 
 
-      #     draft: false  
-      #     prerelease: false
+          draft: false  
+          prerelease: false
 
-      # - name: Create Version Tag
-      #   run: |
-      #     git tag "v${{ steps.github-releases.outputs.VERSION }}"
-      #     git push origin "v${{ steps.github-releases.outputs.VERSION }}"
-      #     echo "Pushed tag: v${{ steps.github-releases.outputs.VERSION }}"
+      - name: Create Version Tag
+        run: |
+          git tag "v${{ steps.version.outputs.VERSION }}"
+          git push origin "v${{ steps.version.outputs.VERSION }}"
+          echo "Pushed tag: v${{ steps.version.outputs.VERSION }}"
 
