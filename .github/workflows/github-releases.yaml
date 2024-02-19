@@ -31,8 +31,8 @@ jobs:
           echo "Extracted version: $VERSION"
           echo "::set-output name=VERSION::$VERSION"
 
-       - name: Get Changelog Content (Modified)
-         run: |
+      - name: Get Changelog Content (Modified)
+        run: |
           content=$(cat CHANGELOG.md | sed -n '/^## [^<]*$/,/^## \([^<]*\)$/p')
           # Remove first line (heading)
           content=${content#*\#*}
