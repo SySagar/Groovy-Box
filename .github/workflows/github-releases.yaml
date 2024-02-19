@@ -38,6 +38,11 @@ jobs:
           content=${content#*\#*}
           echo "::set-output name=changelog_content::$content"
 
+      - name: Print Output Values
+        run: |
+          echo "VERSION: ${{ steps.github-releases.outputs.VERSION }}"
+          echo "CHANGELOG_CONTENT: ${{ steps.changelog_content.outputs.changelog_content }}"
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
