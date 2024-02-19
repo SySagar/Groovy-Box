@@ -26,12 +26,14 @@ jobs:
           npm run lint:ts && npm run build --if-present
 
       - name: Extract Version from package.json
+        id: version
         run: |
           VERSION=$(node -p "require('./package.json').version")
           echo "Extracted version: $VERSION"
           echo "::set-output name=VERSION::$VERSION"
 
       - name: Get Changelog Content (Modified)
+        id: changelog
         run: |
           content=$(cat CHANGELOG.md | sed -n '/^## [^<]*$/,/^## \([^<]*\)$/p')
           # Remove first line (heading)
@@ -40,8 +42,8 @@ jobs:
 
       - name: Print Output Values
         run: |
-          echo "VERSION: ${{ steps.github-release.outputs.VERSION }}"
-          echo "CHANGELOG_CONTENT: ${{ steps.github-release.outputs.changelog_content }}"
+          echo "VERSION: ${{ steps.version.outputs.VERSION }}"
+          echo "CHANGELOG_CONTENT: ${{ steps.changelog.outputs.changelog_content }}"
 
       # - name: Create Release
       #   id: create_release
