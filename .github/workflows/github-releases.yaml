@@ -31,13 +31,12 @@ jobs:
           echo "Extracted version: $VERSION"
           echo "::set-output name=VERSION::$VERSION"
 
-      - name: Get Changelog Entry
-        id: changelog_reader
-        uses: mindsers/changelog-reader-action@v2
-        with:
-          validation_level: warn
-          version: ${{ steps.github-release.outputs.VERSION }}
-          path: ./CHANGELOG.md
+       - name: Get Changelog Content (Modified)
+         run: |
+          content=$(cat CHANGELOG.md | sed -n '/^## [^<]*$/,/^## \([^<]*\)$/p')
+          # Remove first line (heading)
+          content=${content#*\#*}
+          echo "::set-output name=changelog_content::$content"
 
       - name: Create Release
         id: create_release
@@ -50,7 +49,7 @@ jobs:
           body: |
             **Release Changes:**
 
-            ${{ steps.changelog_reader.outputs.changes }}  # Include Changelog content
+            ${{ steps.changelog_content.outputs.changelog_content }} 
 
           draft: false  
           prerelease: false
