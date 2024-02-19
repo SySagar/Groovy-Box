@@ -36,12 +36,13 @@ jobs:
         id: changelog
         run: |
           content=$(awk '/^###/{flag=1; next} /^##/{if(flag) exit} flag' CHANGELOG.md)
-          echo "::set-output name=changelog_content::$content"
+          echo "::set-output name=CHANGELOG::$content"
 
       - name: Print Output Values
         run: |
           echo "VERSION: ${{ steps.version.outputs.VERSION }}"
-          echo "CHANGELOG_CONTENT: ${{ steps.changelog.outputs.changelog_content }}"
+          echo "CHANGELOG_CONTENT: ${{ steps.changelog.outputs.CHANGELOG }}"
+
 
       # - name: Create Release
       #   id: create_release
