@@ -43,6 +43,11 @@ jobs:
           echo "VERSION: ${{ steps.version.outputs.VERSION }}"
           echo "CHANGELOG_CONTENT: ${{ steps.changelog.outputs.CHANGELOG }}"
 
+      - name: Configure npm authentication
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Publish package on NPM 📦
+        run: npm publish --tag "enigma-ui-v${{ steps.version.outputs.VERSION }}"
 
       - name: Create Release
         id: create_release
