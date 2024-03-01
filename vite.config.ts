@@ -14,6 +14,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
+      output: {
+        entryFileNames: 'index.mjs',
+      }
     },
     copyPublicDir: false,
     lib: {

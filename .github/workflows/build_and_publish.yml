@@ -41,6 +41,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          args: deploy --dir=storybook-static --prod
           publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
