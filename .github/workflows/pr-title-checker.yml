@@ -14,4 +14,4 @@ jobs:
     steps:
       - uses: thehanimo/pr-title-checker@v1.3.7
         with:
-          GITHUB_TOKEN: ${{ secrets.EUI_TITLE_CHECKER }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
