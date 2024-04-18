@@ -16,13 +16,13 @@ import logo from '../../static/logo.png'
 const components= [
   {
     title: "Button",
-    href: "/docs/ui/Button",
+    href: "https://enigma-ui-kit.netlify.app/?path=/docs/components-button--docs",
     description:
       "A basic button component that should render nicely on any platform",
   },
   {
     title: "Textfield",
-    href: "/docs/ui/Textfield",
+    href: "https://enigma-ui-kit.netlify.app/?path=/docs/components-textfield--docs",
     description:
       "Customizable TextField to tailor your input fields with ease for enhanced user experiences",
   },
@@ -92,11 +92,12 @@ export default function header() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Classics</NavigationMenuTrigger>
               <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[500px] md:grid-cols-2  ">
               {components.map((component) => (
                 <ListItem
+                  newTab={true}
                   key={component.title}
                   title={component.title}
                   href={component.href}
@@ -108,7 +109,7 @@ export default function header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Components</NavigationMenuTrigger>
               <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -130,7 +131,10 @@ export default function header() {
               <ListItem href="/" title="Introduction">
                 Re-usable components built using Tailwind CSS.
               </ListItem>
-              <ListItem href="/" title="Installation">
+              <ListItem
+               newTab={true}
+               href="https://enigma-ui-kit.netlify.app/?path=/docs/components-button--docs" 
+               title="Browse Components">
                 How to install dependencies and structure your app.
               </ListItem>
             </ul>
@@ -145,12 +149,13 @@ export default function header() {
 
 
 const ListItem = React.forwardRef(
-  function({ className, title, children, ...props }, ref) {
+  function({ className, title, newTab=false, children, ...props }, ref) {
     return (
       React.createElement('li', null,
         React.createElement(NavigationMenuLink, { asChild: true },
           React.createElement('a', {
             ref: ref,
+            target: newTab && "_blank",
             className: cn(
               "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
               className
