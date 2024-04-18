@@ -5,7 +5,7 @@ export default create({
   brandTitle: 'Groovy-Box',
   brandUrl: 'https://enigma-ui-docs.netlify.app/',
   brandImage:
-    'https://raw.githubusercontent.com/EnigmaVSSUT/Enigma-UI-Kit/main/assets/logo.png',
+    'https://raw.githubusercontent.com/SySagar/Groovy-Box/main/assets/logo.png',
   brandTarget: '_self',
 
   //fonts
@@ -13,18 +13,13 @@ export default create({
   fontCode: 'monospace',
 
   //UI
-  appBg: '#2E393F',
+  appBg: '#E9EFE7',
 
   // Text colors
-  textColor: '#BCC1C2',
+  textColor: '#454A44',
   textInverseColor: '#10162F',
 
   // Toolbar default and active colors
   barTextColor: '#9E9E9E',
-  barSelectedColor: '#585C6D',
   barBg: '#ffffff',
-
-  // Form colors
-  inputBg: '#ffffff',
-  inputTextColor: '#10162F',
 });
