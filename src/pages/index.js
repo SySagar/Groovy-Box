@@ -16,7 +16,7 @@ export default function Home() {
             style={{
               display: "flex",
               minHeight: "90vh",
-              background: "#273238",
+              background: "#fff",
             }}
           >
             <div
@@ -37,7 +37,7 @@ export default function Home() {
                   alignItems: "center",
                 }}
               >
-                <p className="text-white font-bold w-2/3 text-center text-5xl">
+                <p className="text-[#2A2C35] font-bold w-2/3 text-center text-5xl">
                   Beautifully crafted components for your next big front-end application.</p>
                 <h3
                 className="font-mdeium text-xl"
@@ -47,7 +47,7 @@ export default function Home() {
                     color: theme.colors.text.secondary,
                   }}
                 >
-                  The official React UI library built by Enigma, VSSUT
+                  The official React UI library built on top of Radix UI.
                 </h3>
 
                 <div
@@ -61,7 +61,7 @@ export default function Home() {
                     gap: "2rem",
                   }}
                 >
-                  <div>
+                  <div style={{position:'relative'}}>
                     <InstallPage />
                   </div>
 

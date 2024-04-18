@@ -40,7 +40,7 @@ export default function header() {
         flexGrow: "1",
         padding: "20px",
         paddingInline: "30px",
-        background: "#2E393F",
+        background: "#E9EFE7",
       }}
     >
       <div
@@ -59,10 +59,9 @@ export default function header() {
         >
           <img
             src="logo.png"
-            style={{ width: "30px", height: "30px" }}
+            style={{ width: "auto", height: "30px"}}
             alt=""
           />
-          <h3 className="text-white font-bold text-lg">Enigma-UI</h3>
         </div>
 
         <div
@@ -118,10 +117,7 @@ export default function header() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <img src={logo} className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Enigma-UI
-                    </div>
+                    <img src={logo} className="h-[60px] w-32 pb-6" />
                     <p className="text-sm leading-tight text-muted-foreground">
                     Elevate UI effortlessly with sleek components for streamlined and stylish development.
                     </p>

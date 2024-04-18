@@ -1,10 +1,10 @@
 const theme = {
   colors: {
     primary: "#25AE24",
-    secondary: "#273238",
+    secondary: "#A2AF9F",
     text: {
       primary: "#FFFFFF",
-      secondary: "#DCDCDC",
+      secondary: "#555A53",
     },
   },
   typography: {

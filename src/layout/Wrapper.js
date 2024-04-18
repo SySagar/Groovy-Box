@@ -21,10 +21,13 @@ const Wrapper = ({ children }) => {
     >
       {React.cloneElement(children)}
       <button
-      className="bg-white flex justify-center items-center "
+      className="flex justify-center items-center "
         style={{
-          height: "50px",
+          height: "55px",
           width: "40px",
+          borderRadius: "5px 5px 5px 5px",
+          color: "#fff",
+          background: "#1D1F21",
         }}
         title="Copy"
         onClick={handleCopyClick}
