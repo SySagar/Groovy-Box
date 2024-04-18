@@ -2,7 +2,7 @@ import { create } from '@storybook/theming/create';
 
 export default create({
   base: 'light',
-  brandTitle: 'Enigma-UI',
+  brandTitle: 'Groovy-Box',
   brandUrl: 'https://enigma-ui-docs.netlify.app/',
   brandImage:
     'https://raw.githubusercontent.com/EnigmaVSSUT/Enigma-UI-Kit/main/assets/logo.png',

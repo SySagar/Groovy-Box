@@ -1,4 +1,4 @@
-# enigma-ui-kit
+# groovy-box
 
 ## 0.1.1
 

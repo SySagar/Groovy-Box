@@ -1,3 +1,3 @@
-## Enigma UI Kit
+## groovy-box
 
-This repo is a UI-Component library built by Enigma
+This repo is a UI-Component library built on top of radixUI
