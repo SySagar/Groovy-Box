@@ -16,13 +16,13 @@ import logo from '../../static/logo.png'
 const components= [
   {
     title: "Button",
-    href: "https://enigma-ui-kit.netlify.app/?path=/docs/components-button--docs",
+    href: "https://groovy-box.netlify.app/?path=/docs/components-button--docs",
     description:
       "A basic button component that should render nicely on any platform",
   },
   {
     title: "Textfield",
-    href: "https://enigma-ui-kit.netlify.app/?path=/docs/components-textfield--docs",
+    href: "https://groovy-box.netlify.app/?path=/docs/components-textfield--docs",
     description:
       "Customizable TextField to tailor your input fields with ease for enhanced user experiences",
   },
