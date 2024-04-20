@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef, useEffect } from 'react';
 
 type textFieldVariant = 'filled' | 'outlined' | 'standard';
 type textFieldSize = 'sm' | 'md' | 'lg';
@@ -64,7 +65,7 @@ export const TextField: React.FC<textFieldProps> = ({
 
   const variantStyles = {
     filled:
-      'bg-[#F1FDEB] hover:bg-[#DAE6D4] text-[#21351B] focus:border-b-2 border-[#35FF1F]',
+      'bg-primary-700 hover:bg-opacity-95 text-[#21351B] focus:border-b-2',
     outlined:
       'bg-transparent hover:border-[#A6B1A0] text-[#21351B] border-[#DAE6D4] border  focus:border-[#35FF1F]',
     standard:
@@ -76,6 +77,19 @@ export const TextField: React.FC<textFieldProps> = ({
   }`;
 
   const iconStyles = `inline-block h-auto w-auto ${startIcon ? 'mr-2' : 'ml-2'}`;
+  const inputRef = useRef<HTMLInputElement>(null);
+  const parentInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (inputRef.current && variant==='filled') {
+      inputRef.current.className = 'text-primaryText';
+    }
+
+    if (inputRef.current && (variant==='filled' || variant==='outlined')) {
+      inputRef.current.className = 'text-secondaryText';
+    }
+  }
+  , [variant]);
 
   const handleFocus = () => {
     const parent = document.getElementById('parent');
@@ -107,6 +121,7 @@ export const TextField: React.FC<textFieldProps> = ({
       {label && <label style={{ marginLeft: '2px' }}>{label}</label>}
       <div
         id="parent"
+        ref={parentInputRef}
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -119,8 +134,8 @@ export const TextField: React.FC<textFieldProps> = ({
         <input
           style={{
             outline: 'none',
-            background: 'transparent',
           }}
+          ref={inputRef}
           type={type}
           placeholder={placeholder}
           disabled={disabled}
