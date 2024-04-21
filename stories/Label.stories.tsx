@@ -5,12 +5,12 @@ import { LabelDemo } from '../lib'; // Assuming LabelComponent is from the same 
 type LabelComponentStory = StoryObj<typeof LabelDemo>;
 
 export default {
-  title: 'LabelComponent',
+  title: 'Components/Label',
   component: LabelDemo,
   tags: ['autodocs'], // Enable autodocs
   argTypes: {
-    htmlFor: { control: 'text' }, // Control type for htmlFor prop
-    children: { control: 'text' }, // Control type for children prop
+    htmlFor: { control: 'text' },
+    children: { control: 'text' }, 
   },
 } as Meta<typeof LabelDemo>;
 

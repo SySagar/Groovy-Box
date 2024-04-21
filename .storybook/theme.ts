@@ -3,11 +3,10 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
   brandTitle: 'Groovy-Box',
-  brandUrl: 'https://enigma-ui-docs.netlify.app/',
+  brandUrl: 'https://groovy-box.soumyasagar.in/',
   brandImage:
-    'https://raw.githubusercontent.com/SySagar/Groovy-Box/main/assets/logo.png',
+    'https://raw.githubusercontent.com/EnigmaVSSUT/Enigma-UI-Kit/main/assets/logo.png',
   brandTarget: '_self',
-
   //fonts
   fontBase: '"Inter", sans-serif',
   fontCode: 'monospace',
@@ -22,4 +21,8 @@ export default create({
   // Toolbar default and active colors
   barTextColor: '#9E9E9E',
   barBg: '#ffffff',
+
+    // Form colors
+    inputBg: '#ffffff',
+    inputTextColor: '#10162F',
 });

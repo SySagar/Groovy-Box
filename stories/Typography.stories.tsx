@@ -47,7 +47,7 @@ export default {
     },
     color: {
       control: 'color',
-      defaultValue: '#35FF1F',
+      defaultValue: '#2A2C35',
       description: 'The color of the text in the Text component.',
     },
     asChild: {
@@ -69,7 +69,7 @@ export const Default = Template.bind({});
 Default.args = {
   variant: 'heading-1',
   alignment: 'left',
-  color: '#35FF1F',
+  color: '#2A2C35',
   children: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 };
 
@@ -79,91 +79,91 @@ export const AllVariants = () => {
     <>
       {/* Body-1 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="body-1" color="#35FF1F">
+        <Text variant="body-1" color="#2A2C35">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>
       </div>
 
       {/* Body-2 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="body-2" color="#35FF1F">
+        <Text variant="body-2" color="#2A2C35">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>
       </div>
 
       {/* Body-3 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="body-3" color="#35FF1F">
+        <Text variant="body-3" color="#2A2C35">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>
       </div>
 
       {/* Button-1 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="button-1" color="#35FF1F">
+        <Text variant="button-1" color="#2A2C35">
           Click Me
         </Text>
       </div>
 
       {/* Heading-1 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="heading-1" color="#35FF1F">
+        <Text variant="heading-1" color="#2A2C35">
           Lorem Ipsum
         </Text>
       </div>
 
       {/* Heading-2 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="heading-2" color="#35FF1F">
+        <Text variant="heading-2" color="#2A2C35">
           Lorem Ipsum
         </Text>
       </div>
 
       {/* Heading-3 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="heading-3" color="#35FF1F">
+        <Text variant="heading-3" color="#2A2C35">
           Lorem Ipsum
         </Text>
       </div>
 
       {/* Heading-4 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="heading-4" color="#35FF1F">
+        <Text variant="heading-4" color="#2A2C35">
           Lorem Ipsum
         </Text>
       </div>
 
       {/* Heading-5 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="heading-5" color="#35FF1F">
+        <Text variant="heading-5" color="#2A2C35">
           Lorem Ipsum
         </Text>
       </div>
 
       {/* Heading-6 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="heading-6" color="#35FF1F">
+        <Text variant="heading-6" color="#2A2C35">
           Lorem Ipsum
         </Text>
       </div>
 
       {/* Label-1 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="label-1" color="#35FF1F">
+        <Text variant="label-1" color="#2A2C35">
           Label Text
         </Text>
       </div>
 
       {/* Label-2 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="label-2" color="#35FF1F">
+        <Text variant="label-2" color="#2A2C35">
           Label Text
         </Text>
       </div>
 
       {/* Subtitle-1 */}
       <div style={{ marginBottom: '20px' }}>
-        <Text variant="subtitle-1" color="#35FF1F">
+        <Text variant="subtitle-1" color="#2A2C35">
           Subtitle Text
         </Text>
       </div>
@@ -185,7 +185,7 @@ export const AlignmentCenterStory = Template.bind({});
 AlignmentCenterStory.args = {
   variant: 'body-1',
   alignment: 'center',
-  color: '#35FF1F',
+  color: '#2A2C35',
   children:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 };
@@ -195,7 +195,7 @@ export const AlignmentLeftStory = Template.bind({});
 AlignmentLeftStory.args = {
   variant: 'body-1',
   alignment: 'left',
-  color: '#35FF1F',
+  color: '#2A2C35',
   children:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
 };
@@ -205,7 +205,7 @@ export const AlignmentRightStory = Template.bind({});
 AlignmentRightStory.args = {
   variant: 'body-1',
   alignment: 'right',
-  color: '#35FF1F',
+  color: '#2A2C35',
   children:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
 };
@@ -215,7 +215,7 @@ export const AlignmentJustifyStory = Template.bind({});
 AlignmentJustifyStory.args = {
   variant: 'body-1',
   alignment: 'justify',
-  color: '#35FF1F',
+  color: '#2A2C35',
   children:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
 };
@@ -225,7 +225,7 @@ export const Body2MaxLinesEllipsis = Template.bind({});
 Body2MaxLinesEllipsis.args = {
   variant: 'body-2',
   alignment: 'left',
-  color: '#35FF1F',
+  color: '#2A2C35',
   width: 400,
   children:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
@@ -237,6 +237,6 @@ asChild.args = {
   variant: 'body-1',
   asChild: true,
   alignment: 'center',
-  color: '#35FF1F',
+  color: '#2A2C35',
   children: <h1>This is heading 1</h1>,
 };

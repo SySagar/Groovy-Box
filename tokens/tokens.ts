@@ -1,4 +1,4 @@
-const customClasses = {
+export const customTypographyClasses = {
   '.typo-body-1': {
     fontSize: '16px',
     lineHeight: '24px',
@@ -98,5 +98,3 @@ const customClasses = {
     fontWeight: '500',
   },
 };
-
-export default customClasses;
