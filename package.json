@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.mjs",
   "typings": "dist/index.d.ts",
@@ -10,7 +10,6 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
     "watch": "tcm --watch ./lib",
     "check:up-to-date-types": "tcm --listDifferent ./lib",
     "build": "tsc && vite build",
@@ -20,7 +19,6 @@
     "lint": "eslint ./src --ext .ts,.tsx",
     "lint-fix": "eslint --fix .",
     "lint:ts": "tsc",
-    "prepare": "tsdx build && husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "storybook dev -p 6006",
@@ -96,7 +94,6 @@
     "size-limit": "^10.0.2",
     "storybook": "^7.6.17",
     "tailwindcss": "^3.3.5",
-    "tsdx": "^0.14.1",
     "tslib": "^2.6.2",
     "typed-css-modules": "^0.9.1",
     "typescript": "^5.2.2",

@@ -1,5 +1,11 @@
 # groovy-box
 
+## 0.2.0
+
+### Minor Changes
+
+- 93dd009: themeing and tokens
+
 ## 0.1.1
 
 ### Patch Changes
