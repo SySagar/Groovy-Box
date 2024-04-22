@@ -4,7 +4,7 @@ import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Wrapper from "../layout/Wrapper";
 
 const InstallPage = () => {
-  const codeString = `npm i enigma-ui-kit`;
+  const codeString = `npm i groovy-box`;
 
   return (
     <Wrapper>
