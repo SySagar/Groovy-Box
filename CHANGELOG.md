@@ -1,5 +1,11 @@
 # groovy-box
 
+## 0.2.1
+
+### Patch Changes
+
+- ab6ffed: versioning clash resolution
+
 ## 0.2.0
 
 ### Minor Changes
