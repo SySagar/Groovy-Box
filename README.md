@@ -37,6 +37,14 @@ Check out our latest releases or visit [GroovyBox](https://groovy-box.soumyasaga
 - VS-code
 - Storybook
 - Typescript
+- WSL
+
+### Designs
+
+<a href="https://www.figma.com/file/xSPncVLJ2zWhIA3UwC9mK6/Untitled?type=design&node-id=1-6&mode=design&t=PbidxKEaRcHaV6le-0">
+  <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+</a>
+
 
 ### Setup
 - Clone the repository.
