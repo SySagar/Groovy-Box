@@ -55,6 +55,13 @@ Check out our latest releases or visit [GroovyBox](https://groovy-box.soumyasaga
 ## Known problems
 none
 
+## Stats
+<div style={{display:"flex"}}>    
+    
+![example workflow](https://github.com/SySagar/Groovy-Box/actions/workflows/build_and_publish.yml/badge.svg)
+[![codecov](https://codecov.io/gh/SySagar/Groovy-Box/branch/dev/graph/badge.svg?token=SW96J1IZIQ)](https://codecov.io/gh/SySagar/Groovy-Box)
+</div>
+
 ## Contributions
 There's a huge room for improvements! Please open an issue to report bugs, discuss ideas and so on.
 
