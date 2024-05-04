@@ -1,5 +1,11 @@
 # groovy-box
 
+## 0.3.0
+
+### Minor Changes
+
+- dd81928: (Component) Select
+
 ## 0.2.1
 
 ### Patch Changes
