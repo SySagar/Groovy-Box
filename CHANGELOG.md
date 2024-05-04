@@ -1,5 +1,11 @@
 # groovy-box
 
+## 0.3.1
+
+### Patch Changes
+
+- 30f90e6: code coverage
+
 ## 0.3.0
 
 ### Minor Changes
