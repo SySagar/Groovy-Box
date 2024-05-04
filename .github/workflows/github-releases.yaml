@@ -60,7 +60,7 @@ jobs:
           body: |
             **Release Changes:**
 
-            ${{ steps.changelog.outputs.CHANGELOG }} 
+            https://www.npmjs.com/package/groovy-box/v/${{ steps.version.outputs.VERSION }}
 
           draft: false  
           prerelease: false
