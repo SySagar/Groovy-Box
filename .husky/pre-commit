@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run lint:ts
 npm run check:up-to-date-types
+npm run lint:ts
 npm run format

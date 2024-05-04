@@ -81,15 +81,14 @@ export const TextField: React.FC<textFieldProps> = ({
   const parentInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (inputRef.current && variant==='filled') {
+    if (inputRef.current && variant === 'filled') {
       inputRef.current.className = 'text-primaryText';
     }
 
-    if (inputRef.current && (variant==='filled' || variant==='outlined')) {
+    if (inputRef.current && (variant === 'filled' || variant === 'outlined')) {
       inputRef.current.className = 'text-secondaryText';
     }
-  }
-  , [variant]);
+  }, [variant]);
 
   const handleFocus = () => {
     const parent = document.getElementById('parent');

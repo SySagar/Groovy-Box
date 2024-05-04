@@ -17,7 +17,7 @@
     "test": "jest",
     "test-cov": "jest --coverage",
     "format": "prettier --write lib/**/* stories/**/* && git add -A .",
-    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint": "eslint ./lib --ext .ts,.tsx",
     "lint-fix": "eslint --fix .",
     "lint:ts": "tsc",
     "size": "size-limit",
