@@ -10,7 +10,7 @@ export default {
   tags: ['autodocs'], // Enable autodocs
   argTypes: {
     htmlFor: { control: 'text' },
-    children: { control: 'text' }, 
+    children: { control: 'text' },
   },
 } as Meta<typeof LabelDemo>;
 
