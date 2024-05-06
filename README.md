@@ -30,7 +30,7 @@
 - Unit test for each componenets
 
 
-Check out our latest releases or visit [GroovyBox](https://groovy-box.soumyasagar.in/) to browse more
+Check out our latest releases or visit [GroovyBox](https://groovy-box.netlify.app/?path=/docs/components-button--docs) to browse more componenets
 
 ## Development setup
 ### Tools
