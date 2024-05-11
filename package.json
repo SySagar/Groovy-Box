@@ -14,6 +14,7 @@
     "check:up-to-date-types": "tcm --listDifferent ./lib",
     "build": "tsc && vite build",
     "release": "changeset publish",
+    "pub:beta": "npm run build && npm publish --no-git-checks --access public --tag beta",
     "test": "jest",
     "test-cov": "jest --coverage",
     "format": "prettier --write lib/**/* stories/**/* && git add -A .",
