@@ -1,0 +1,49 @@
+name: Release - Beta
+
+on:
+  pull_request:
+    types: [labeled]
+    branches:
+      - dev
+jobs:
+  prerelease:
+    if: |
+      github.repository_owner == 'SySagar' &&
+      contains(github.event.pull_request.labels.*.name, '🚀 autorelease')
+    name: Build & Publish a beta release to NPM
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install NPM Dependencies
+        run: npm install
+
+      - name: Modify package.json version
+        run: node ./.github/beta-release.js
+
+      - name: Authenticate to NPM
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish Beta to NPM 📦
+        run: npm run pub:beta
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - name: Upload packaged artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: groovy-box@${{ steps.package-version.outputs.current-version }}-pr-${{ github.event.number }} # encode the PR number into the artifact name
+          path: ./dist/index.mjs
