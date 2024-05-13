@@ -1,5 +1,11 @@
 # groovy-box
 
+## 0.0.0
+
+### Patch Changes
+
+- ced0bef: pre-release setup
+
 ## 0.3.1
 
 ### Patch Changes
