@@ -1,8 +1,9 @@
 {
-  "version": "0.3.1",
+  "version": "0.0.0-beta.b63db44",
   "license": "MIT",
   "main": "dist/index.mjs",
   "typings": "dist/index.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
@@ -14,6 +15,7 @@
     "check:up-to-date-types": "tcm --listDifferent ./lib",
     "build": "tsc && vite build",
     "release": "changeset publish",
+    "pub:beta": "npm run build && npm publish --no-git-checks --access public --tag beta",
     "test": "jest",
     "test-cov": "jest --coverage",
     "format": "prettier --write lib/**/* stories/**/* && git add -A .",
