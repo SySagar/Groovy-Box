@@ -21,6 +21,7 @@
 </p>
 
 ## Features
+
 - Comprises brand new UI componenete
 - Highly customizable using tailwind
 - Built on unstyled radix-ui primitives
@@ -29,11 +30,12 @@
 - Published on NPM
 - Unit test for each componenets
 
-
 Check out our latest releases or visit [GroovyBox](https://groovy-box.netlify.app/?path=/docs/components-button--docs) to browse more componenets
 
 ## Development setup
+
 ### Tools
+
 - VS-code
 - Storybook
 - Typescript
@@ -45,17 +47,19 @@ Check out our latest releases or visit [GroovyBox](https://groovy-box.netlify.ap
   <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
 </a>
 
-
 ### Setup
+
 - Clone the repository.
 - Open a fresh terminal in the cloned project and hit `npm install`
 - start the development server using `npm run storybook`
 - This would start server at port 6006
 
 ## Known problems
+
 none
 
 ## Stats
+
 <div style={{display:"flex"}}>    
     
 ![example workflow](https://github.com/SySagar/Groovy-Box/actions/workflows/build_and_publish.yml/badge.svg)
@@ -63,9 +67,9 @@ none
 </div>
 
 ## Contributions
+
 There's a huge room for improvements! Please open an issue to report bugs, discuss ideas and so on.
 
 Check out the repo's [issue backlog](https://github.com/SySagar/Groovy-Box/issues) for source requests and bug reports.
-
 
 ## Please Share & Star the repository. This motivates me a lot :)
