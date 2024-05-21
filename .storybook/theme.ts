@@ -22,7 +22,7 @@ export default create({
   barTextColor: '#9E9E9E',
   barBg: '#ffffff',
 
-    // Form colors
-    inputBg: '#ffffff',
-    inputTextColor: '#10162F',
+  // Form colors
+  inputBg: '#ffffff',
+  inputTextColor: '#10162F',
 });
