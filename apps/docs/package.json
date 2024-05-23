@@ -10,16 +10,20 @@
     "start": "next start",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@next/eslint-plugin-next": "^14.2.3",
     "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@repo/eslint-config": "*",
     "class-variance-authority": "^0.7.0",
     "clipboard-copy": "^4.0.1",
     "clsx": "^2.1.0",
     "enigma-ui-kit": "^0.0.1",
+    "eslint": "^8.57.0",
     "lucide-react": "^0.309.0",
     "next": "^14.2.3",
     "react": "^18.3.1",

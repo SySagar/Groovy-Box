@@ -4,14 +4,11 @@ import * as styles from './layout.module.css';
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from '../utility/ui/navigation-menu';
-import { any } from 'prop-types';
 
 const components = [
   {

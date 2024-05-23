@@ -1,5 +1,4 @@
 import React from 'react';
-import copy from 'clipboard-copy';
 import { MdContentCopy } from 'react-icons/md';
 
 const Wrapper = ({ children }) => {

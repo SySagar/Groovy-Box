@@ -11,12 +11,13 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "check:up-to-date-types": "tcm --listDifferent ./apps/ui/lib",
-    "lint:ts": "tsc",
+    "lint": "turbo lint",
     "format": "prettier --write ./apps/ui/lib/**/* ./apps/ui/stories/**/* ./apps/docs/**/* && git add -A ."
   },
   "devDependencies": {
     "prettier": "^3.2.5",
     "turbo": "latest",
-    "typed-css-modules": "^0.9.1"
+    "typed-css-modules": "^0.9.1",
+    "@repo/eslint-config": "*"
   }
 }
