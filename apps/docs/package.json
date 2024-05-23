@@ -9,8 +9,6 @@
     "build": "next build",
     "start": "next start",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {

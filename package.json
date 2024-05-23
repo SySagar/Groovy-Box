@@ -12,7 +12,7 @@
     "build": "turbo build",
     "check:up-to-date-types": "tcm --listDifferent ./apps/ui/lib",
     "lint": "turbo lint",
-    "format": "prettier --write ./apps/ui/lib/**/* ./apps/ui/stories/**/* ./apps/docs/**/* && git add -A ."
+    "format": "prettier --write ./apps/ui/lib/**/* ./apps/ui/stories/**/* ./apps/docs/**/*"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
