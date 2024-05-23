@@ -1,4 +1,3 @@
-
 // function themeChanger() {
 //   async function fetchThemeData() {
 //     try {

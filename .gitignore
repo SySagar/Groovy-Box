@@ -8,3 +8,4 @@ dist
 storybook-static
 # Local Netlify folder
 .netlify
+.turbo
