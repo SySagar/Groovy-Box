@@ -12,12 +12,15 @@
     "build": "turbo build",
     "check:up-to-date-types": "tcm --listDifferent ./apps/ui/lib",
     "lint": "turbo lint",
-    "format": "prettier --write ./apps/ui/lib/**/* ./apps/ui/stories/**/* ./apps/docs/**/* && git add -A ."
+    "format": "prettier --write ./apps/ui/lib/**/* ./apps/ui/stories/**/* ./apps/docs/**/*"
   },
   "devDependencies": {
+    "@repo/eslint-config": "*",
     "prettier": "^3.2.5",
     "turbo": "latest",
-    "typed-css-modules": "^0.9.1",
-    "@repo/eslint-config": "*"
+    "typed-css-modules": "^0.9.1"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.3"
   }
 }
