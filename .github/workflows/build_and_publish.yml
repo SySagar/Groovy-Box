@@ -2,7 +2,7 @@ name: CI
 
 on:
   workflow_dispatch:
-    branches: [main, releases]
+    branches: [main, releases, monorepo]
 
 permissions:
   contents: write
@@ -35,13 +35,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14.x
-          cache: "npm"
+          cache: 'npm'
       - run: npm install
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
-          args: deploy --dir=storybook-static --prod
           publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
