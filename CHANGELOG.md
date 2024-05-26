@@ -1,5 +1,11 @@
 # groovy-box
 
+## 0.3.3
+
+### Patch Changes
+
+- 8826862: avatar component
+
 ## 0.3.2
 
 ### Patch Changes
