@@ -5,3 +5,4 @@ export * from './components/Textfield';
 export * from './components/Typography';
 export * from './components/Label';
 export * from './components/Select';
+export * from './components/Avatar';
