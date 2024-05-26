@@ -1,10 +1,13 @@
 import plugin from 'tailwindcss/plugin';
-import type { Config } from 'tailwindcss'
-import {colors,customTypographyClasses} from './tokens';
+import type { Config } from 'tailwindcss';
+import { colors, customTypographyClasses } from './tokens';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./lib/**/*.{html,ts,tsx,js,jsx}'],
+  content: [
+    './lib/**/*.{html,ts,tsx,js,jsx}',
+    './stories/**/*.{ts,tsx,js,jsx}',
+  ],
   theme: {
     extend: {},
     colors,
@@ -14,4 +17,4 @@ module.exports = {
       addUtilities(customTypographyClasses);
     }),
   ],
-} satisfies Config
+} satisfies Config;
