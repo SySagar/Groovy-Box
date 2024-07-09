@@ -14,23 +14,25 @@
     "incremental": true,
     "plugins": [
       {
-        "name": "next",
-      },
+        "name": "next"
+      }
     ],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
       "@components/*": ["app/components/*"],
       "@layouts/*": ["app/layout/*"],
-      "@utility/*": ["src/utility/*"],
-    },
+      "@utility/*": ["src/utility/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
+    "index.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "postcss.config.cjs",
+    ".eslintrc.js"
   ],
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }

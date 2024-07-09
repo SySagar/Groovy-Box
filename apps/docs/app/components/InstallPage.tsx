@@ -9,7 +9,7 @@ const InstallPage = () => {
 
   return (
     <Wrapper>
-      <SyntaxHighlighter language='javascript' style={atomDark}>
+      <SyntaxHighlighter language="javascript" style={atomDark}>
         {codeString}
       </SyntaxHighlighter>
     </Wrapper>

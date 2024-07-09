@@ -6,9 +6,13 @@
     "module": "ESNext",
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "dist/lib",
+    "emitDeclarationOnly": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./lib/*"],
+      "@utils/*": ["./utils/*"]
     },
 
     /* Bundler mode */
@@ -16,15 +20,14 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["lib","./lib/declaration.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": ["lib", "./lib/declaration.d.ts", ".eslintrc.cjs"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,0 +1,10 @@
+*.log
+.DS_Store
+node_modules
+.cache
+dist
+.env
+.netlify
+storybook-static
+# Local Netlify folder
+.netlify

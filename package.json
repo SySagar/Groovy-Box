@@ -9,18 +9,22 @@
   ],
   "scripts": {
     "dev": "turbo dev",
+    "ui:dev": "turbo dev --filter @groovy-box/ui",
+    "docs:dev": "turbo dev --filter @groovy-box/docs",
     "build": "turbo build",
+    "ui:build": "turbo build --filter @groovy-box/ui",
     "check:up-to-date-types": "tcm --listDifferent ./apps/ui/lib",
     "lint": "turbo lint",
-    "format": "prettier --write ./apps/ui/lib/**/* ./apps/ui/stories/**/* ./apps/docs/**/*"
+    "format": "turbo format",
+    "release": "changeset publish"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
     "prettier": "^3.2.5",
     "turbo": "latest",
     "typed-css-modules": "^0.9.1"
   },
   "dependencies": {
-    "@changesets/cli": "^2.27.3"
+    "@changesets/cli": "^2.27.3",
+    "eslint": "^8.57.0"
   }
 }

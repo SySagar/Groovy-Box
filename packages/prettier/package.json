@@ -1,0 +1,13 @@
+{
+  "name": "@groovy-box/prettier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "prettier.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

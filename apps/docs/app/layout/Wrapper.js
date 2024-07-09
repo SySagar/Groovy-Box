@@ -14,7 +14,7 @@ const Wrapper = ({ children }) => {
     >
       {React.cloneElement(children)}
       <button
-        className='flex justify-center items-center '
+        className="flex justify-center items-center "
         style={{
           height: '55px',
           width: '40px',
@@ -22,7 +22,7 @@ const Wrapper = ({ children }) => {
           color: '#fff',
           background: '#1D1F21',
         }}
-        title='Copy'
+        title="Copy"
       >
         <MdContentCopy />
       </button>
