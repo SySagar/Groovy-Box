@@ -6,6 +6,7 @@
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {},
+    "test-cov": {},
     "format": {
       "inputs": ["apps/**/*.{ts,tsx,js,jsx}", "packages/**/*.{ts,tsx,js,jsx}"]
     }
