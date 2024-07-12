@@ -5,7 +5,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Wrapper from '../layout/Wrapper';
 
 const InstallPage = () => {
-  const codeString = `npm i groovy-box`;
+  const codeString = `npm i @groovy-box/ui`;
 
   return (
     <Wrapper>
