@@ -13,6 +13,7 @@
     "docs:dev": "turbo dev --filter @groovy-box/docs",
     "build": "turbo build",
     "ui:build": "turbo build --filter @groovy-box/ui",
+    "ui:coverage": "turbo test-cov --filter @groovy-box/ui",
     "check:up-to-date-types": "tcm --listDifferent ./apps/ui/lib",
     "lint": "turbo lint",
     "format": "turbo format",
