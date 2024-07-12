@@ -1,0 +1,13 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "dev": {},
+    "build": {
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "format": {
+      "inputs": ["apps/**/*.{ts,tsx,js,jsx}", "packages/**/*.{ts,tsx,js,jsx}"]
+    }
+  }
+}
