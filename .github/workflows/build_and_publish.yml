@@ -25,7 +25,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install, build, and test
         run: |
-          npm install --frozen-lockfile
+          npm install --frozen-lockfile --force
           npm run ui:build --if-present
         env:
           CI: true
