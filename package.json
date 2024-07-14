@@ -21,6 +21,7 @@
     "release": "changeset publish"
   },
   "devDependencies": {
+    "@storybook/react-vite": "^8.2.1",
     "prettier": "^3.2.5",
     "turbo": "latest",
     "typed-css-modules": "^0.9.1"
