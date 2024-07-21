@@ -15,11 +15,13 @@
     "ui:build": "turbo build --filter @groovy-box/ui",
     "ui:coverage": "turbo test-cov --filter @groovy-box/ui",
     "check:up-to-date-types": "tcm --listDifferent ./apps/ui/lib",
+    "watch": "tcm --watch ./apps/ui/lib",
     "lint": "turbo lint",
     "format": "turbo format",
     "release": "changeset publish"
   },
   "devDependencies": {
+    "@storybook/react-vite": "^8.2.1",
     "prettier": "^3.2.5",
     "turbo": "latest",
     "typed-css-modules": "^0.9.1"

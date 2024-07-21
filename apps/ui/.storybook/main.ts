@@ -1,14 +1,31 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+import { mergeConfig } from 'vite';
+import { defineConfig } from 'vite';
+const tsconfigPaths = require('vite-tsconfig-paths').default;
+
 module.exports = {
   stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
 
-  webpackFinal: async (config, { configType }) => {
-    config.resolve.plugins = [new TsconfigPathsPlugin()];
-    return config;
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      plugins: [tsconfigPaths()],
+    });
   },
+
+  viteConfig: defineConfig({
+    resolve: {
+      alias: {
+        '@': '/src',
+        '@utils': '/utils',
+      },
+    },
+  }),
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-controls',
+    'storybook-css-modules',
     {
       name: '@storybook/addon-postcss',
       options: {
@@ -25,8 +42,13 @@ module.exports = {
   },
 
   framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
+    name: '@storybook/react-vite',
+    // options: {
+    //   legacyRootApi: true,
+    //   builder: {
+    //     viteConfigPath: './vite.config.ts',
+    //   },
+    // },
   },
 
   docs: {
