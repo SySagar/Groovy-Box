@@ -1,30 +1,24 @@
-import * as Label from '@radix-ui/react-label';
-import styles from './label.module.css';
+import * as React from 'react';
+import * as LabelPrimitive from '@radix-ui/react-label';
+import { cva, type VariantProps } from 'class-variance-authority';
 
-export const LabelDemo = ({
-  htmlFor = 'firstname',
-  children = 'hello',
-}: {
-  htmlFor: string;
-  children: string;
-}) => (
-  <div
-    style={{
-      display: 'flex',
-      padding: '0 20px',
-      flexWrap: 'wrap',
-      gap: 15,
-      alignItems: 'center',
-    }}
-  >
-    <Label.Root className={styles.LabelRoot} htmlFor={htmlFor}>
-      {children}
-    </Label.Root>
-    <input
-      className={styles.Input}
-      type="text"
-      id="firstName"
-      defaultValue="Pedro Duarte"
-    />
-  </div>
+import { cn } from '@utils/utils';
+
+const labelVariants = cva(
+  'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
 );
+
+const Label = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
+    VariantProps<typeof labelVariants>
+>(({ className, ...props }, ref) => (
+  <LabelPrimitive.Root
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+  />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+
+export { Label };
