@@ -1,18 +1,18 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { LabelDemo } from '../lib'; // Assuming LabelComponent is from the same file or a relevant import path
+import { Label } from '../lib';
 
-type LabelComponentStory = StoryObj<typeof LabelDemo>;
+type LabelComponentStory = StoryObj<typeof Label>;
 
 export default {
   title: 'Components/Label',
-  component: LabelDemo,
-  tags: ['autodocs'], // Enable autodocs
+  component: Label,
+  tags: ['autodocs'],
   argTypes: {
     htmlFor: { control: 'text' },
     children: { control: 'text' },
   },
-} as Meta<typeof LabelDemo>;
+} as Meta<typeof Label>;
 
 export const BasicLabelComponent: LabelComponentStory = {
   args: {
