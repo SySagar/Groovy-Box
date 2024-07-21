@@ -10,23 +10,31 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v1
 
-      - name: Use Node.js 14.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run build-storybook --if-present
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: app/ui
+
+      - name: Build Storybook
+        run: npm run build-storybook --if-present
+        working-directory: app/ui
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=app/ui/storybook-static --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
