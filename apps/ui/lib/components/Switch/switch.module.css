@@ -1,0 +1,14 @@
+.switchRoot[data-state='checked'] {
+  background: #656a80;
+}
+
+.switchRoot[data-state='unchecked'] {
+  background: #dcdee3;
+}
+
+.switchThumb[data-state='checked'] {
+  transform: translateX(110%);
+}
+.switchThumb[data-state='unchecked'] {
+  transform: translateX(0px);
+}
