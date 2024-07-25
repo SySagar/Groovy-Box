@@ -9,3 +9,4 @@ export * from './components/Avatar';
 export * from './components/Accordion';
 export * from './components/Navigation-menu';
 export * from './components/Switch';
+export * from './components/Toast';
