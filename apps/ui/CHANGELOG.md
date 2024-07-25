@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.0.0
+
+### Major Changes
+
+- cdeeb2f: added toast component
+
 ## 1.1.0
 
 ### Minor Changes
