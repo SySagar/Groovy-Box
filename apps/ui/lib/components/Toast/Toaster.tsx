@@ -5,6 +5,7 @@ import {
   ToastProvider,
   ToastTitle,
   ToastViewport,
+  ToastAction,
 } from './Toast';
 import { useToast } from './hooks/use-toast';
 
@@ -31,3 +32,5 @@ export function Toaster() {
     </ToastProvider>
   );
 }
+
+export { ToastAction };
