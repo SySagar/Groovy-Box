@@ -2,12 +2,8 @@
   "name": "@groovy-box/ui",
   "version": "2.0.0",
   "license": "MIT",
-  "main": "dist/index.mjs",
-  "typings": "dist/lib/index.d.ts",
+  "author": "SySagar",
   "type": "module",
-  "files": [
-    "dist"
-  ],
   "exports": {
     ".": {
       "types": "./dist/lib/index.d.ts",
@@ -15,26 +11,30 @@
     },
     "./dist/*": "./dist/*"
   },
-  "engines": {
-    "node": ">=10"
-  },
+  "main": "dist/index.mjs",
+  "typings": "dist/lib/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "analyze": "size-limit --why",
+    "build": "npx sort-package-json && tsc && vite build",
+    "build-storybook": "storybook build",
     "dev": "storybook dev -p 6006",
-    "build": "tsc && vite build",
-    "release": "changeset publish",
-    "pub:beta": "npm run build && npm publish --no-git-checks --access public --tag beta",
-    "test": "jest",
-    "test-cov": "jest --coverage",
     "format": "prettier --write lib/**/* stories/**/* && git add -A .",
     "lint": "eslint ./lib --ext .ts,.tsx",
     "lint-fix": "eslint --fix .",
+    "pub:beta": "npm run build && npm publish --no-git-checks --access public --tag beta",
+    "release": "changeset publish",
     "size": "size-limit",
-    "analyze": "size-limit --why",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test": "jest",
+    "test-cov": "jest --coverage"
   },
-  "peerDependencies": {
-    "react": ">=16"
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
   },
   "prettier": {
     "printWidth": 80,
@@ -42,23 +42,23 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "author": "SySagar",
-  "size-limit": [
-    {
-      "path": "dist/groovy-box.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/groovy-box.esm.js",
-      "limit": "10 KB"
-    }
-  ],
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-select": "^2.0.0",
+    "class-variance-authority": "^0.7.0",
+    "classnames": "^2.5.1",
+    "lucide-react": "^0.377.0",
+    "tailwind-merge": "^2.3.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-react": "^7.22.15",
     "@babel/preset-typescript": "^7.23.2",
     "@changesets/cli": "^2.27.1",
+    "@groovy-box/tokens": "*",
     "@radix-ui/react-label": "^2.0.2",
     "@size-limit/preset-small-lib": "^10.0.2",
     "@storybook/addon-controls": "^7.6.20",
@@ -116,22 +116,23 @@
     "vite-plugin-lib-inject-css": "^2.1.1",
     "vite-tsconfig-paths": "^4.3.2"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write"
-    ]
+  "peerDependencies": {
+    "react": ">=16"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.6.1"
   },
-  "dependencies": {
-    "@radix-ui/react-avatar": "^1.0.4",
-    "@radix-ui/react-icons": "^1.3.0",
-    "@radix-ui/react-select": "^2.0.0",
-    "class-variance-authority": "^0.7.0",
-    "classnames": "^2.5.1",
-    "lucide-react": "^0.377.0",
-    "tailwind-merge": "^2.3.0",
-    "tsconfig-paths-webpack-plugin": "^4.1.0"
-  }
+  "engines": {
+    "node": ">=10"
+  },
+  "size-limit": [
+    {
+      "path": "dist/groovy-box.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/groovy-box.esm.js",
+      "limit": "10 KB"
+    }
+  ]
 }

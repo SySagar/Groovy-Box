@@ -1,6 +1,6 @@
 import plugin from 'tailwindcss/plugin';
 import type { Config } from 'tailwindcss';
-import { colors, customTypographyClasses } from './tokens';
+import { colors, customTypographyClasses } from '@groovy-box/tokens';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
