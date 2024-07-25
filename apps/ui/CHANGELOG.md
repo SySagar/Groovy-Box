@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.1.0
+
+### Minor Changes
+
+- 7c5b3d9: added tokens packages
+
 ## 2.0.0
 
 ### Major Changes
