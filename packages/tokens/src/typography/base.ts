@@ -1,100 +1,41 @@
+const createTypographyClass = (
+  className,
+  fontSize,
+  lineHeight,
+  fontWeight,
+  letterSpacing = 'normal',
+) => ({
+  [className]: {
+    fontSize,
+    lineHeight,
+    fontWeight,
+    fontFamily: 'Inter, sans-serif',
+    letterSpacing,
+  },
+});
+
+export const groovyFontFamily = {
+  Inter: ['Inter', 'sans-serif'],
+};
+
 export const customTypographyClasses = {
-  '.typo-body-1': {
-    fontSize: '16px',
-    lineHeight: '24px',
-    fontWeight: '400',
-  },
-  '.typo-body-2': {
-    fontSize: '14px',
-    lineHeight: '20px',
-    fontWeight: '400',
-  },
-  '.typo-body-3': {
-    fontSize: '12px',
-    lineHeight: '16px',
-    fontWeight: '400',
-  },
-  '.typo-button-1': {
-    fontSize: '16px',
-    lineHeight: '26px',
-    fontWeight: '500',
-    letterSpacing: '0.1px',
-  },
-  '.typo-button-2': {
-    fontSize: '14px',
-    lineHeight: '20px',
-    fontWeight: '500',
-  },
-  '.typo-button-3': {
-    fontSize: '12px',
-    lineHeight: '16px',
-    fontWeight: '500',
-  },
-  '.typo-heading-1': {
-    fontSize: '28px',
-    lineHeight: '36px',
-    fontWeight: '400',
-  },
-  '.typo-heading-2': {
-    fontSize: '24px',
-    lineHeight: '30px',
-    fontWeight: '600',
-  },
-  '.typo-heading-3': {
-    fontSize: '20px',
-    lineHeight: '26px',
-    fontWeight: '600',
-  },
-  '.typo-heading-4': {
-    fontSize: '18px',
-    lineHeight: '24px',
-    fontWeight: '600',
-  },
-  '.typo-heading-5': {
-    fontSize: '16px',
-    lineHeight: '22px',
-    fontWeight: '600',
-  },
-  '.typo-heading-6': {
-    fontSize: '14px',
-    lineHeight: '20px',
-    fontWeight: '600',
-  },
-  '.typo-label-1': {
-    fontSize: '14px',
-    lineHeight: '20px',
-    fontWeight: '400',
-    letterSpacing: '-0.24px',
-  },
-  '.typo-label-2': {
-    fontSize: '12px',
-    lineHeight: '16px',
-    fontWeight: '400',
-  },
-  '.typo-label-2-strong': {
-    fontSize: '12px',
-    lineHeight: '16px',
-    fontWeight: '500',
-  },
-  '.typo-label-3': {
-    fontSize: '10px',
-    lineHeight: '12px',
-    fontWeight: '400',
-  },
-  '.typo-subtitle-1': {
-    fontSize: '16px',
-    lineHeight: '22px',
-    fontWeight: '500',
-    letterSpacing: '0.1px',
-  },
-  '.typo-subtitle-2': {
-    fontSize: '14px',
-    lineHeight: '20px',
-    fontWeight: '500',
-  },
-  '.typo-subtitle-3': {
-    fontSize: '12px',
-    lineHeight: '16px',
-    fontWeight: '500',
-  },
+  ...createTypographyClass('.typo-body-1', '16px', '24px', '400'),
+  ...createTypographyClass('.typo-body-2', '14px', '20px', '400'),
+  ...createTypographyClass('.typo-body-3', '12px', '16px', '400'),
+  ...createTypographyClass('.typo-button-1', '16px', '26px', '500', '0.1px'),
+  ...createTypographyClass('.typo-button-2', '14px', '20px', '500'),
+  ...createTypographyClass('.typo-button-3', '12px', '16px', '500'),
+  ...createTypographyClass('.typo-heading-1', '28px', '36px', '400'),
+  ...createTypographyClass('.typo-heading-2', '24px', '30px', '600'),
+  ...createTypographyClass('.typo-heading-3', '20px', '26px', '600'),
+  ...createTypographyClass('.typo-heading-4', '18px', '24px', '600'),
+  ...createTypographyClass('.typo-heading-5', '16px', '22px', '600'),
+  ...createTypographyClass('.typo-heading-6', '14px', '20px', '600'),
+  ...createTypographyClass('.typo-label-1', '14px', '20px', '400', '-0.24px'),
+  ...createTypographyClass('.typo-label-2', '12px', '16px', '400'),
+  ...createTypographyClass('.typo-label-2-strong', '12px', '16px', '500'),
+  ...createTypographyClass('.typo-label-3', '10px', '12px', '400'),
+  ...createTypographyClass('.typo-subtitle-1', '16px', '22px', '500', '0.1px'),
+  ...createTypographyClass('.typo-subtitle-2', '14px', '20px', '500'),
+  ...createTypographyClass('.typo-subtitle-3', '12px', '16px', '500'),
 };
