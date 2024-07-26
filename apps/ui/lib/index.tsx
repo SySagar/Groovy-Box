@@ -1,3 +1,4 @@
+import '@groovy-box/tokens/src/fonts.css';
 import './tailwind.css';
 
 export * from './components/Button';

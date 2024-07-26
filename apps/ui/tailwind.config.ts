@@ -1,6 +1,10 @@
 import plugin from 'tailwindcss/plugin';
 import type { Config } from 'tailwindcss';
-import { colors, customTypographyClasses } from '@groovy-box/tokens';
+import {
+  colors,
+  customTypographyClasses,
+  groovyFontFamily,
+} from '@groovy-box/tokens';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,7 +13,9 @@ module.exports = {
     './stories/**/*.{ts,tsx,js,jsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: groovyFontFamily,
+    },
     colors,
   },
   plugins: [
