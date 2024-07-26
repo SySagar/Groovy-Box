@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.2.0
+
+### Minor Changes
+
+- ee50a16: font tokens added
+
 ## 2.1.0
 
 ### Minor Changes
