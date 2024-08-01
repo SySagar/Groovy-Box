@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.2.1
+
+### Patch Changes
+
+- 404c769: Progress component added
+
 ## 2.2.0
 
 ### Minor Changes
