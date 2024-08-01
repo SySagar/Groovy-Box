@@ -3,7 +3,7 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
   brandTitle: 'Groovy-Box',
-  brandUrl: 'https://groovy-box.soumyasagar.in/',
+  brandUrl: 'https://ui.soumyasagar.in/',
   brandImage:
     'https://raw.githubusercontent.com/EnigmaVSSUT/Enigma-UI-Kit/main/assets/logo.png',
   brandTarget: '_self',
