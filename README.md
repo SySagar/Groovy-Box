@@ -35,6 +35,7 @@ Check out our latest releases or visit [GroovyBox](https://groovy-box.netlify.ap
 ## Development setup
 ### Tools
 - VS-code
+- Turborepo
 - Storybook
 - Typescript
 - WSL
@@ -49,8 +50,8 @@ Check out our latest releases or visit [GroovyBox](https://groovy-box.netlify.ap
 ### Setup
 - Clone the repository.
 - Open a fresh terminal in the cloned project and hit `npm install`
-- start the development server using `npm run storybook`
-- This would start server at port 6006
+- start the development server using `npm run dev`
+- This would start storybook ui server at port 6006 and next js docs at 3000
 
 ## Known problems
 none
