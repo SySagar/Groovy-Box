@@ -14,7 +14,7 @@ const Access = () => {
     >
       <a
         className="access"
-        href="https://www.npmjs.com/package/enigma-ui-kit"
+        href="https://www.npmjs.com/package/@groovy-box/ui"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -22,7 +22,7 @@ const Access = () => {
       </a>
       <a
         className="access"
-        href="https://github.com/EnigmaVSSUT/Enigma-UI-Kit"
+        href="https://github.com/SySagar/Groovy-Box"
         target="_blank"
         rel="noopener noreferrer"
       >
