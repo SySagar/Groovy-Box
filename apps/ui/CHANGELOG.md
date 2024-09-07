@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.2.2
+
+### Patch Changes
+
+- 8df942b: tailwind support
+
 ## 2.2.1
 
 ### Patch Changes
