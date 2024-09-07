@@ -2,13 +2,12 @@ import React from 'react';
 import { VARIANT_MAPPINGS } from './constants';
 import { Slot } from './Slot';
 import style from './text.module.css';
-import clsx from 'clsx';
-export interface TextProps {
+import { cn } from '@utils/utils';
+export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   variant?: keyof typeof VARIANT_MAPPINGS;
   alignment?: 'left' | 'right' | 'center' | 'justify';
   color?: string;
   width?: number;
-  minHeight?: number;
   maxLines?: number;
   asChild?: boolean;
   children: React.ReactNode;
@@ -26,7 +25,7 @@ export const Text: React.FC<TextProps> = ({
 }) => {
   const textStyle = {
     textAlign: alignment || 'center',
-    color: color || 'inherit',
+    color: color,
     margin: '0 0 0 0',
     padding: '0 0 0 0',
     display: asChild ? 'inline-block' : 'block',
@@ -38,14 +37,12 @@ export const Text: React.FC<TextProps> = ({
 
   const Comp = asChild ? Slot : 'p';
   const classNames = VARIANT_MAPPINGS[variant as keyof typeof VARIANT_MAPPINGS];
-  const mergedClassess = variant
-    ? clsx(style.text, classNames.slice(1))
-    : style.text;
+  const mergedClasses = cn(style.text, classNames?.slice(1), props.className);
 
   return (
     <div>
       <Comp
-        className={mergedClassess}
+        className={mergedClasses}
         style={textStyle}
         children={children}
         {...props}

@@ -180,6 +180,17 @@ ColorStory.args = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 };
 
+export const withTailwind = () => {
+  return (
+    <div style={{ marginBottom: '20px' }}>
+      <Text className="text-error-700" color="#f0a">
+        With color props
+      </Text>
+      <Text className="text-secondary-300 text-xl">with tailwind classes</Text>
+    </div>
+  );
+};
+
 // Alignment Center
 export const AlignmentCenterStory = Template.bind({});
 AlignmentCenterStory.args = {

@@ -21,7 +21,7 @@
     "build": "npx sort-package-json && tsc && vite build",
     "build-storybook": "storybook build",
     "dev": "storybook dev -p 6006",
-    "format": "prettier --write lib/**/* stories/**/* && git add -A .",
+    "format": "prettier --write lib/**/* stories/**/*",
     "lint": "eslint ./lib --ext .ts,.tsx",
     "lint-fix": "eslint --fix .",
     "pub:beta": "npm run build && npm publish --no-git-checks --access public --tag beta",
