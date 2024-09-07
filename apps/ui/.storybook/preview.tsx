@@ -1,4 +1,5 @@
 // https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
+import '../lib/tailwind.css';
 
 const customViewports = {
   xs: {

@@ -1,18 +1,17 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { Button } from '../lib/components/Button/index';
-import { Colors, Variants, Sizes } from '../stories/Button.stories';
+import { Variants, Sizes } from '../stories/Button.stories';
 import '@testing-library/jest-dom';
 
 const argsColor = {
-  variant: 'filled',
+  variant: 'default',
   size: 'md',
 };
 
 const args = {
-  variant: 'filled',
+  variant: 'default',
   size: 'md',
-  color: 'primary',
 };
 
 describe('Button Component', () => {
@@ -20,20 +19,10 @@ describe('Button Component', () => {
     render(<Button />);
   });
 
-  //renders colors
-  test('renders Colors ', () => {
-    render(Colors(argsColor));
-    const primaryButton = screen.getByText('primary');
-    const secondaryButton = screen.getByText('secondary');
-
-    expect(primaryButton).toBeInTheDocument();
-    expect(secondaryButton).toBeInTheDocument();
-  });
-
   test('renders Variants', () => {
     render(Variants(args));
-    const outlinedButton = screen.getByText('Outlined');
-    const filledButton = screen.getByText('Filled');
+    const outlinedButton = screen.getByText('Default');
+    const filledButton = screen.getByText('destructive');
 
     expect(outlinedButton).toBeInTheDocument();
     expect(filledButton).toBeInTheDocument();

@@ -31,4 +31,6 @@ export const colors = {
 
   primaryText: '#EBEBEB',
   secondaryText: '#1E1E1E',
+
+  accent: '#EBEBEB',
 };
