@@ -1,24 +1,13 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import { Button, ButtonProps } from '../lib';
+import { Button } from '../lib';
 
 export default {
   title: 'Components/Button',
   component: Button,
-  argTypes: {
-    variant: {
-      control: { type: 'radio', options: ['filled', 'outlined'] },
-    },
-    color: {
-      control: { type: 'radio', options: ['primary', 'secondary'] },
-    },
-    size: {
-      control: { type: 'radio', options: ['sm', 'md', 'lg'] },
-    },
-  },
 } as Meta;
 
-export const Colors = (args: ButtonProps) => (
+export const Variants = () => (
   <div
     style={{
       display: 'flex',
@@ -29,23 +18,28 @@ export const Colors = (args: ButtonProps) => (
     }}
   >
     <div>
-      <Button {...args} color="primary">
-        primary
-      </Button>
+      <Button variant={'default'}>Default</Button>
     </div>
     <div>
-      <Button {...args} color="secondary">
-        secondary
-      </Button>
+      <Button variant={'secondary'}>secondary</Button>
+    </div>
+    <div>
+      <Button variant={'destructive'}>destructive</Button>
+    </div>
+    <div>
+      <Button variant={'outline'}>Outline</Button>
+    </div>
+    <div>
+      <Button variant={'link'}>Link</Button>
     </div>
   </div>
 );
 
-Colors.args = {
-  variant: 'filled',
+export const tailwindButton = () => {
+  return <Button className="bg-warning-500 text-secondaryText">Hello</Button>;
 };
 
-export const Variants = (args: ButtonProps) => (
+export const Sizes = () => (
   <div
     style={{
       display: 'flex',
@@ -56,46 +50,13 @@ export const Variants = (args: ButtonProps) => (
     }}
   >
     <div>
-      <Button {...args} variant="outlined">
-        Outlined
-      </Button>
+      <Button size="sm">Small</Button>
     </div>
     <div>
-      <Button {...args} variant="filled">
-        Filled
-      </Button>
-    </div>
-  </div>
-);
-
-Variants.args = {
-  color: 'primary',
-};
-
-export const Sizes = (args: ButtonProps) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '1rem',
-    }}
-  >
-    <div>
-      <Button {...args} size="sm">
-        Small
-      </Button>
+      <Button size="default">Medium</Button>
     </div>
     <div>
-      <Button {...args} size="md">
-        Medium
-      </Button>
-    </div>
-    <div>
-      <Button {...args} size="lg">
-        Large
-      </Button>
+      <Button size="lg">Large</Button>
     </div>
   </div>
 );

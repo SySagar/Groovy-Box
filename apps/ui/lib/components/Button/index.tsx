@@ -1,51 +1,53 @@
-import React from 'react';
+import * as React from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import { cva, type VariantProps } from 'class-variance-authority';
 
-type ButtonVariant = 'filled' | 'outlined' | 'text';
-type ButtonSize = 'sm' | 'md' | 'lg';
-type ButtonColor = 'primary' | 'secondary';
+import { cn } from '@utils/utils';
+
+const buttonVariants = cva(
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  {
+    variants: {
+      variant: {
+        default: 'bg-primary-700 text-primaryText hover:bg-primary/90',
+        destructive: 'bg-error-900 text-primaryText hover:bg-destructive/90',
+        outline:
+          'border border-input  hover:bg-accent hover:text-accent-foreground',
+        secondary: 'bg-secondary-700 text-primaryText hover:bg-secondary/80',
+        link: 'text-primary-500 underline-offset-4 hover:underline',
+      },
+      size: {
+        default: 'h-10 px-4 py-2',
+        sm: 'h-9 rounded-md px-3',
+        lg: 'h-11 rounded-md px-8',
+        icon: 'h-10 w-10',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  }
+);
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  color?: ButtonColor;
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  variant = 'filled',
-  size = 'md',
-  color = 'primary',
-  children,
-  ...props
-}) => {
-  const baseStyles = 'rounded font-semibold';
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button';
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = 'Button';
 
-  const sizeStyles = {
-    sm: 'py-1 px-2 text-sm',
-    md: 'py-2 px-4',
-    lg: 'py-3 px-10 text-lg',
-  };
-
-  const colorStyles = {
-    primary: {
-      filled: 'bg-primary-700 hover:bg-primary-500 text-primaryText',
-      outlined:
-        'bg-transparent bg-opacity-5 bg-primary-300 hover:bg-primary-500 hover:bg-opacity-10 text-primary-700 border-primary-700 border focus:ring-[#00C200]',
-      text: 'bg-transparent hover:bg-primary-500 hover:bg-opacity-30 text-primary-700',
-    },
-    secondary: {
-      filled: 'bg-secondary-700 hover:bg-secondary-500 text-primaryText',
-      outlined:
-        'bg-transparent hover:bg-secondary-900 hover:bg-opacity-10 text-secondary-700 border-secondary-700 border',
-      text: 'bg-transparent hover:bg-secondary-700 hover:bg-opacity-10 text-secondary-700',
-    },
-  };
-
-  const buttonStyles = `${baseStyles} ${sizeStyles[size]} ${colorStyles[color][variant]}`;
-
-  return (
-    <button className={buttonStyles} {...props}>
-      {children}
-    </button>
-  );
-};
+export { Button, buttonVariants };
