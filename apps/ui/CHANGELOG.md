@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.2.3
+
+### Patch Changes
+
+- 3dd99ee: button and text color fix
+
 ## 2.2.2
 
 ### Patch Changes
