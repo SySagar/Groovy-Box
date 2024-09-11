@@ -20,3 +20,11 @@ export const BasicLabelComponent: LabelComponentStory = {
     children: 'First Name:',
   },
 };
+
+export const LabelWithTailwind = () => {
+  return (
+    <Label htmlFor="firstName" className="text-error-900">
+      First Name:
+    </Label>
+  );
+};

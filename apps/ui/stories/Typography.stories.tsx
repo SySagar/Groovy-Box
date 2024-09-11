@@ -80,91 +80,91 @@ export const AllVariants = () => {
       {/* Body-1 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="body-1" color="#2A2C35">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          body-1
         </Text>
       </div>
 
       {/* Body-2 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="body-2" color="#2A2C35">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          body-2
         </Text>
       </div>
 
       {/* Body-3 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="body-3" color="#2A2C35">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          body-3
         </Text>
       </div>
 
       {/* Button-1 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="button-1" color="#2A2C35">
-          Click Me
+          Button-1
         </Text>
       </div>
 
       {/* Heading-1 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="heading-1" color="#2A2C35">
-          Lorem Ipsum
+          Heading-1
         </Text>
       </div>
 
       {/* Heading-2 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="heading-2" color="#2A2C35">
-          Lorem Ipsum
+          Heading-2
         </Text>
       </div>
 
       {/* Heading-3 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="heading-3" color="#2A2C35">
-          Lorem Ipsum
+          Heading-3
         </Text>
       </div>
 
       {/* Heading-4 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="heading-4" color="#2A2C35">
-          Lorem Ipsum
+          Heading-4
         </Text>
       </div>
 
       {/* Heading-5 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="heading-5" color="#2A2C35">
-          Lorem Ipsum
+          Heading-5
         </Text>
       </div>
 
       {/* Heading-6 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="heading-6" color="#2A2C35">
-          Lorem Ipsum
+          Heading-6
         </Text>
       </div>
 
       {/* Label-1 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="label-1" color="#2A2C35">
-          Label Text
+          label-1
         </Text>
       </div>
 
       {/* Label-2 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="label-2" color="#2A2C35">
-          Label Text
+          label-2
         </Text>
       </div>
 
       {/* Subtitle-1 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="subtitle-1" color="#2A2C35">
-          Subtitle Text
+          subtitle-1
         </Text>
       </div>
     </>
@@ -186,7 +186,17 @@ export const withTailwind = () => {
       <Text className="text-error-700" color="#f0a">
         With color props
       </Text>
-      <Text className="text-secondary-300 text-xl">with tailwind classes</Text>
+      <Text variant="heading-1">with tailwind classes</Text>
+    </div>
+  );
+};
+
+export const withTailwindAndVariant = () => {
+  return (
+    <div style={{ marginBottom: '20px' }}>
+      <Text variant="heading-1" className="text-error-700">
+        with tailwind classes and variant
+      </Text>
     </div>
   );
 };
