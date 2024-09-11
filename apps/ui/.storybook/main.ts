@@ -25,6 +25,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-controls',
+    '@storybook/addon-themes',
     'storybook-css-modules',
     {
       name: '@storybook/addon-postcss',
