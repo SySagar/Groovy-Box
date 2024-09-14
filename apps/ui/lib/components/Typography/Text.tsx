@@ -37,9 +37,8 @@ export const Text: React.FC<TextProps> = ({
 
   const Comp = asChild ? Slot : 'p';
   const classNames = VARIANT_MAPPINGS[variant as keyof typeof VARIANT_MAPPINGS];
-  console.log('test', classNames?.slice(1));
   const mergedClasses = cn(style.text, classNames?.slice(1), props.className);
-  console.log('merged classes', mergedClasses);
+
   return (
     <div>
       <Comp
