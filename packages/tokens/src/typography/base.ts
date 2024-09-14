@@ -9,7 +9,7 @@ const createTypographyClass = (
     fontSize,
     lineHeight,
     fontWeight,
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: groovyFontFamily,
     letterSpacing,
   },
 });
