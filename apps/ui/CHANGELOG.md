@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.2.4
+
+### Patch Changes
+
+- af238ef: style: font from parent
+
 ## 2.2.3
 
 ### Patch Changes
