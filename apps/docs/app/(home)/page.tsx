@@ -1,14 +1,13 @@
-import InstallPage from '@components/InstallPage';
-import Access from '@components/Access';
+import Link from 'next/link';
+import InstallPage from './components/InstallPage';
+import Access from './components/Access';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
+    <main className='flex h-[calc(100vh-56px)] flex-col justify-center text-center'>
       <div
         style={{
           display: 'flex',
-          minHeight: '90vh',
-          background: '#fff',
         }}
       >
         <div
@@ -29,12 +28,12 @@ export default function Home() {
               alignItems: 'center',
             }}
           >
-            <p className='text-[#2A2C35] font-bold w-2/3 text-center text-5xl'>
+            <p className=' font-bold w-2/3 text-center text-5xl'>
               Beautifully crafted components for your next big front-end
               application.
             </p>
             <h3
-              className='font-mdeium text-xl text-appTextSecondaryColor'
+              className='font-medium text-xl text-appTextSecondaryColor'
               style={{
                 width: '50vw',
                 textAlign: 'center',
