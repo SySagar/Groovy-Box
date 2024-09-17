@@ -13,20 +13,20 @@ const Access = () => {
       }}
     >
       <a
-        className="access"
-        href="https://www.npmjs.com/package/@groovy-box/ui"
-        target="_blank"
-        rel="noopener noreferrer"
+        className='access'
+        href='https://www.npmjs.com/package/@groovy-box/ui'
+        target='_blank'
+        rel='noopener noreferrer'
       >
-        <FaNpm size={100} />
+        <FaNpm size={80} />
       </a>
       <a
-        className="access"
-        href="https://github.com/SySagar/Groovy-Box"
-        target="_blank"
-        rel="noopener noreferrer"
+        className='access'
+        href='https://github.com/SySagar/Groovy-Box'
+        target='_blank'
+        rel='noopener noreferrer'
       >
-        <FaGithub size={50} />
+        <FaGithub size={40} />
       </a>
     </div>
   );
