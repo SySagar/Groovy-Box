@@ -8,6 +8,7 @@ import {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  prefix: 'grv-',
   content: [
     './lib/**/*.{html,ts,tsx,js,jsx}',
     './stories/**/*.{ts,tsx,js,jsx}',
@@ -23,4 +24,7 @@ module.exports = {
       addUtilities(customTypographyClasses);
     }),
   ],
+  corePlugins: {
+    preflight: false, // <== disable this!
+  },
 } satisfies Config;

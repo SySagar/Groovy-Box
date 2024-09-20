@@ -5,23 +5,25 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@utils/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'grv-inline-flex grv-items-center grv-justify-center grv-whitespace-nowrap grv-rounded-md grv-text-sm grv-font-medium grv-ring-offset-background grv-transition-colors focus-visible:grv-outline-none focus-visible:grv-ring-2 focus-visible:grv-ring-ring focus-visible:grv-ring-offset-2 disabled:grv-pointer-events-none disabled:grv-opacity-50',
   {
     variants: {
       variant: {
-        default: 'bg-primary-700 text-primaryText hover:bg-primary-700/90',
-        destructive: 'bg-error-900 text-primaryText hover:bg-error-900/90',
+        default:
+          'grv-bg-primary-700 grv-text-primaryText hover:grv-bg-primary-700/90 grv-border-none',
+        destructive:
+          'grv-bg-error-900 grv-text-primaryText hover:grv-bg-error-900/90 grv-border-none grv-outline-0 grv-shadow-none',
         outline:
-          'border border-input  hover:bg-accent hover:text-accent-foreground',
+          ' grv-border-none grv-bg-primary-100/0 hover:grv-bg-primary-700/20 hover:grv-text-accent-foreground grv-outline grv-font-medium grv-outline-1 grv-shadow-none',
         secondary:
-          'bg-secondary-700 text-primaryText hover:bg-secondary-700/80',
-        link: 'text-primary-500 underline-offset-4 hover:underline',
+          'grv-bg-secondary-700 grv-text-primaryText hover:grv-bg-secondary-700/80  grv-border-none grv-outline-0 grv-shadow-none',
+        link: 'grv-text-primary-500 grv-underline-offset-4 hover:grv-underline grv-bg-primary-100/0 grv-font-medium grv-border-none hover:grv-cursor-pointer',
       },
       size: {
-        default: 'h-10 px-4 py-2',
-        sm: 'h-9 rounded-md px-3',
-        lg: 'h-11 rounded-md px-8',
-        icon: 'h-10 w-10',
+        default: 'grv-h-10 grv-px-4 grv-py-2',
+        sm: 'grv-h-9 grv-rounded-md grv-px-3',
+        lg: 'grv-h-11 grv-rounded-md grv-px-8',
+        icon: 'grv-h-10 grv-w-10',
       },
     },
     defaultVariants: {
