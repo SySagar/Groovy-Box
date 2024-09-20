@@ -12,6 +12,7 @@
     "ui:dev": "turbo dev --filter @groovy-box/ui",
     "docs:dev": "turbo dev --filter @groovy-box/docs",
     "build": "turbo build",
+    "vercel-build": "turbo run build --filter @groovy-box/ui && cd apps/docs && npm run build",
     "ui:build": "turbo build --filter @groovy-box/ui",
     "ui:coverage": "turbo test-cov --filter @groovy-box/ui",
     "check:up-to-date-types": "tcm --listDifferent ./apps/ui/lib",

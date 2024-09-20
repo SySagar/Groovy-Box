@@ -1,6 +1,166 @@
 ---
 title: Button
-description: A basic BUtton
+description: Displays a basic button or a component that looks like a button.
 ---
 
-button stuff
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Button } from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <Button variant="default">default</Button>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Button } from "@groovy-box/ui"
+
+export function ButtonDefault() {
+  return <Button variant='default'>default</Button>;
+}
+
+````
+
+    </Tab>
+</Tabs>
+
+## Secondary
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <Button variant="secondary">secondary</Button>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+
+```tsx
+import { Button } from "@groovy-box/ui"
+
+export function ButtonSecondary() {
+  return <Button variant='secondary'>secondary</Button>;
+}
+
+````
+
+    </Tab>
+
+</Tabs>
+
+## Destructive
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <Button variant="destructive">destructive</Button>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+
+```tsx
+import { Button } from '@groovy-box/ui';
+
+export function ButtonDestructive() {
+  return <Button variant='destructive'>destructive</Button>;
+}
+```
+
+    </Tab>
+
+</Tabs>
+
+## Outline
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <Button variant="outline">outline</Button>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+
+```tsx
+import { Button } from '@groovy-box/ui';
+
+export function ButtonOutline() {
+  return <Button variant='outline'>outline</Button>;
+}
+```
+
+    </Tab>
+
+</Tabs>
+
+## Link
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <Button variant="link">Link</Button>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+
+```tsx
+import { Button } from '@groovy-box/ui';
+
+export function ButtonLink() {
+  return <Button variant='link'>Link</Button>;
+}
+```
+
+    </Tab>
+
+</Tabs>
+
+## Sizes
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <div>
+      <Button size="sm">Small</Button>
+    </div>
+    <div>
+      <Button size="default">Medium</Button>
+    </div>
+    <div>
+      <Button size="lg">Large</Button>
+    </div>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+
+```tsx
+import { Button } from '@groovy-box/ui';
+
+export function ButtonLink() {
+  return (
+    <div>
+      <div>
+        <Button size='sm'>Small</Button>
+      </div>
+      <div>
+        <Button size='default'>Medium</Button>
+      </div>
+      <div>
+        <Button size='lg'>Large</Button>
+      </div>
+    </div>
+  );
+}
+```
+
+    </Tab>
+
+</Tabs>
