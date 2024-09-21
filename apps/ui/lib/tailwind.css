@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ui blockquote,
+.ui dl,
+.ui dd,
+.ui h1,
+.ui h2,
+.ui h3,
+.ui h4,
+.ui h5,
+.ui h6,
+.ui hr,
+.ui figure,
+.ui img,
+.ui span,
+.ui p,
+.ui pre {
+  all: unset; /* Unsets all the properties */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default paddings */
+}

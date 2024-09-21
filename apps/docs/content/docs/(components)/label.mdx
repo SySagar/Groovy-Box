@@ -1,0 +1,62 @@
+---
+title: Label
+description: Renders an accessible label associated with controls
+---
+
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Label, Switch } from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+       <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyItems: 'center',
+
+        gap: '1rem',
+      }}
+    >
+       <Label
+        className="Label text-cyan-700"
+        htmlFor="airplane-mode"
+        style={{ paddingRight: 15 }}
+      >
+        Airplane mode
+      </Label>
+      <Switch className="SwitchRoot" id="airplane-mode" />
+    </div>
+
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Label, Switch } from "@groovy-box/ui"
+
+export function LabelDefault() {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <Label
+        className='Label text-cyan-700'
+        htmlFor='airplane-mode'
+        style={{ paddingRight: 15 }}
+      >
+        Airplane mode
+      </Label>
+      <Switch className='SwitchRoot' id='airplane-mode' />
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>

@@ -13,7 +13,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn('border-b', className)}
+    className={cn('grv-border-b ui', className)}
     {...props}
   />
 ));
@@ -23,24 +23,24 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex text-primary-500">
+  <AccordionPrimitive.Header className="grv-flex grv-text-primary-500 typo-body-1">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:text-primary-300  [&[data-state=open]>svg]:rotate-180',
+        'grv-flex grv-flex-1 grv-items-center grv-justify-between grv-py-4 grv-font-medium grv-transition-all hover:grv-text-primary-300  [&[data-state=open]>svg]:grv-rotate-180',
         className
       )}
       {...props}
     >
       {children}
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown className="grv-h-4 grv-w-4 grv-shrink-0 grv-transition-transform grv-duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
 const accordionContentStyles = cva([
-  'overflow-hidden text-sm transition-all',
+  'grv-overflow-hidden grv-text-sm grv-transition-all',
   styles.accordionContent,
 ]);
 
@@ -53,7 +53,7 @@ const AccordionContent = React.forwardRef<
     className={accordionContentStyles()}
     {...props}
   >
-    <div className={cn('pb-4 pt-0', className)}>{children}</div>
+    <div className={cn('grv-pb-4 grv-pt-0', className)}>{children}</div>
   </AccordionPrimitive.Content>
 ));
 

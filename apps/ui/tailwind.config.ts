@@ -1,6 +1,10 @@
 import plugin from 'tailwindcss/plugin';
 import type { Config } from 'tailwindcss';
 import {
+  scopedPreflightStyles,
+  isolateInsideOfContainer,
+} from 'tailwindcss-scoped-preflight';
+import {
   colors,
   customTypographyClasses,
   groovyFontFamily,
@@ -9,6 +13,7 @@ import {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   prefix: 'grv-',
+  important: true,
   content: [
     './lib/**/*.{html,ts,tsx,js,jsx}',
     './stories/**/*.{ts,tsx,js,jsx}',
@@ -21,7 +26,10 @@ module.exports = {
   },
   plugins: [
     plugin(({ addUtilities }) => {
-      addUtilities(customTypographyClasses);
+      addUtilities(customTypographyClasses, { respectPrefix: false });
+    }),
+    scopedPreflightStyles({
+      isolationStrategy: isolateInsideOfContainer('.ui', {}),
     }),
   ],
   corePlugins: {

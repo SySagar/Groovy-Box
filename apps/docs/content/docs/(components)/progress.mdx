@@ -1,0 +1,59 @@
+---
+title: Progress
+description: Displays an indicator showing the completion progress of a task, typically displayed as a progress bar
+---
+
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Progress, Text } from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+       <div
+      style={{
+        display: 'flex',
+        alignItems: 'start',
+        flexDirection: 'column',
+        justifyItems: 'start',
+        width:"400px",
+        gap: '1rem',
+      }}
+    >
+      <Text variant="heading-5">{40}% complete</Text>
+      <Progress value={40} />
+    </div>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Progress,Text } from "@groovy-box/ui"
+import {useState} from 'React';
+
+export function ProgressDefault() {
+  const [value, setValue] = useState(40);
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'start',
+        flexDirection: 'column',
+        justifyItems: 'start',
+        gap: '1rem',
+      }}
+    >
+      <Text variant='heading-4'>{value}% complete</Text>
+      <Progress value={value} />
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>

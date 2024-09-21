@@ -55,38 +55,38 @@ export const TextField: React.FC<textFieldProps> = ({
   ...props
 }) => {
   const baseStyles =
-    'rounded font-semibold flex items-center focus:outline-none';
+    'grv-rounded grv-font-semibold grv-flex grv-items-center focus:grv-outline-none';
 
   const sizeStyles = {
-    sm: 'py-1 px-2 text-sm',
-    md: 'py-2 px-2',
-    lg: 'py-3 px-2 text-lg',
+    sm: 'grv-py-1 grv-px-2 grv-text-sm',
+    md: 'grv-py-2 grv-px-2',
+    lg: 'grv-py-3 grv-px-2 grv-text-lg',
   };
 
   const variantStyles = {
     filled:
-      'bg-primary-700 hover:bg-opacity-95 text-[#21351B] focus:border-b-2',
+      'grv-bg-primary-700 hover:grv-bg-opacity-95 grv-text-[#21351B] focus:grv-border-b-2',
     outlined:
-      'bg-transparent hover:border-[#A6B1A0] text-[#21351B] border-[#DAE6D4] border  focus:border-[#35FF1F]',
+      'grv-bg-transparent hover:grv-border-[#A6B1A0] grv-text-[#21351B] grv-border-[#DAE6D4] grv-border  focus:grv-border-[#35FF1F]',
     standard:
-      ' bg-transparent text-[#21351B] border-b-2 border-[#DAE6D4] hover:border-[#A6B1A0]  focus:border-b-2 focus:border-[#35FF1F]',
+      ' grv-bg-transparent grv-text-[#21351B] grv-border-b-2 grv-border-[#DAE6D4] hover:grv-border-[#A6B1A0]  focus:grv-border-b-2 focus:grv-border-[#35FF1F]',
   };
 
   const textFieldStyles = `${baseStyles} ${sizeStyles[size]} ${
     variantStyles[variant as keyof typeof variantStyles]
   }`;
 
-  const iconStyles = `inline-block h-auto w-auto ${startIcon ? 'mr-2' : 'ml-2'}`;
+  const iconStyles = `grv-inline-block grv-h-auto grv-w-auto ${startIcon ? 'grv-mr-2' : 'grv-ml-2'}`;
   const inputRef = useRef<HTMLInputElement>(null);
   const parentInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (inputRef.current && variant === 'filled') {
-      inputRef.current.className = 'text-primaryText';
+      inputRef.current.className = 'grv-text-primaryText';
     }
 
     if (inputRef.current && (variant === 'filled' || variant === 'outlined')) {
-      inputRef.current.className = 'text-secondaryText';
+      inputRef.current.className = 'grv-text-secondaryText';
     }
   }, [variant]);
 

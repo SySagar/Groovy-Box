@@ -1,4 +1,9 @@
 import { createPreset } from 'fumadocs-ui/tailwind-plugin';
+import {
+  scopedPreflightStyles,
+  isolateInsideOfContainer,
+  isolateOutsideOfContainer,
+} from 'tailwindcss-scoped-preflight';
 
 /** @type {import('tailwindcss').Config} */
 export default {
