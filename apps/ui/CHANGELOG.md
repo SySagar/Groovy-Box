@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.3.0
+
+### Minor Changes
+
+- 6a8c722: tailwind preflight scope
+
 ## 2.2.4
 
 ### Patch Changes
