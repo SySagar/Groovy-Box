@@ -1,18 +1,18 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { Switch } from '../lib';
+import { Label, Switch } from '../lib';
 
 const DefaultTemplate = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <label
+      <Label
         className="Label"
         htmlFor="airplane-mode"
         style={{ paddingRight: 15 }}
       >
         Airplane mode
-      </label>
+      </Label>
       <Switch className="SwitchRoot" id="airplane-mode" />
     </div>
   );

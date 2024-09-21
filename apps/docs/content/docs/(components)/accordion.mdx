@@ -1,0 +1,71 @@
+---
+title: Accordion
+description: A vertically stacked set of interactive headings that each reveal a section of content.
+---
+
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+     <div className="w-56">
+   <Accordion type="single" defaultValue="item-1" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Accordion 1</AccordionTrigger>
+        <AccordionContent>Content 1</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Accordion 2</AccordionTrigger>
+        <AccordionContent>Content 2</AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Accordion 3</AccordionTrigger>
+        <AccordionContent>Content 3</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+ </div>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+    ```tsx
+import {   Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger, } from "@groovy-box/ui"
+
+export function AccordionDefault() {
+  return (
+    <div className='w-56'>
+      <Accordion type='single' defaultValue='item-1' collapsible>
+        <AccordionItem value='item-1'>
+          <AccordionTrigger>Accordion 1</AccordionTrigger>
+          <AccordionContent>Content 1</AccordionContent>
+        </AccordionItem>
+        <AccordionItem value='item-2'>
+          <AccordionTrigger>Accordion 2</AccordionTrigger>
+          <AccordionContent>Content 2</AccordionContent>
+        </AccordionItem>
+        <AccordionItem value='item-3'>
+          <AccordionTrigger>Accordion 3</AccordionTrigger>
+          <AccordionContent>Content 3</AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </div>
+  );
+}
+
+    ```
+    </Tab>
+
+</Tabs>

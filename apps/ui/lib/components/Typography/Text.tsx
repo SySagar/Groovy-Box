@@ -43,7 +43,7 @@ export const Text: React.FC<TextProps> = ({
     <div>
       <Comp
         {...props}
-        className={mergedClasses}
+        className={cn(mergedClasses, 'ui')}
         style={textStyle}
         children={children}
       />

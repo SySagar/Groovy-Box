@@ -5,12 +5,12 @@ import { cn } from '@utils/utils';
 import styles from './switch.module.css';
 
 const switchRootStyles = cva([
-  'inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:cursor-not-allowed disabled:opacity-50',
+  'grv-inline-flex ui grv-h-6 grv-w-11 grv-shrink-0 grv-cursor-pointer grv-items-center grv-rounded-full grv-transition-colors focus:grv-outline-none focus:grv-ring-2 focus:grv-ring-primary-500 disabled:grv-cursor-not-allowed disabled:grv-opacity-50',
   styles.switchRoot,
 ]);
 
 const switchThumbStyles = cva([
-  'pointer-events-none block h-5 w-5 rounded-full bg-primary-900 shadow-md ring-0 transition-transform',
+  'grv-pointer-events-none ui grv-block grv-h-5 grv-w-5 grv-rounded-full grv-bg-primary-900 grv-shadow-md grv-ring-0 grv-transition-transform',
   styles.switchThumb,
 ]);
 

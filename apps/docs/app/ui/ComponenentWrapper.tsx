@@ -7,7 +7,7 @@ export default function ComponenentWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <div className='flex flex-row items-center justify-center h-[300px] gap-20'>
+    <div className='ui flex flex-row items-center justify-center h-[300px] gap-20'>
       {children}
     </div>
   );
