@@ -51,6 +51,7 @@
     "lucide-react": "^0.377.0",
     "postcss-prefix-selector": "^1.16.1",
     "tailwind-merge": "^2.3.0",
+    "tailwindcss-scoped-preflight": "^3.4.4",
     "tsconfig-paths-webpack-plugin": "^4.1.0"
   },
   "devDependencies": {

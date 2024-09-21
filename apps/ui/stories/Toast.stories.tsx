@@ -18,8 +18,8 @@ const DefaultTemplate = () => {
       <Button
         onClick={() => {
           toast({
-            title: 'Uh oh! Something went wrong.',
-            description: 'There was a problem with your request.',
+            title: 'Whats up!.',
+            description: 'Have a nice day.',
           });
         }}
       >

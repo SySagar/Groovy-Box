@@ -1,0 +1,215 @@
+---
+title: Avatar
+description: An image/icon element with a fallback for representing the user.
+---
+
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Avatar, AvatarImage, AvatarContent, AvatarFallback } from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <Avatar>
+    <AvatarImage
+      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="Avatar Image"
+    />
+    <AvatarFallback>SY</AvatarFallback>
+  </Avatar>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+    ```tsx
+import {  Avatar, AvatarImage, AvatarContent, AvatarFallback } from "@groovy-box/ui"
+
+export function AvatarDefault() {
+  return (
+    <Avatar>
+      <AvatarContent>
+        <img
+          src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          alt='Avatar Content Image'
+          className='h-full w-full object-cover'
+        />
+      </AvatarContent>
+    </Avatar>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
+
+## With icon
+
+import { Search, File } from 'lucide-react';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+   <Avatar >
+      <AvatarContent className="flex items-center justify-center">
+        <Search size={24} />
+      </AvatarContent>
+    </Avatar>
+    <Avatar>
+      <AvatarContent className="bg-blue-300 flex items-center justify-center">
+        <File size={24} />
+      </AvatarContent>
+    </Avatar>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+    ```tsx
+import {  Avatar, AvatarImage, AvatarContent, AvatarFallback } from "@groovy-box/ui"
+
+export function AvatarDefault() {
+  return (
+    <Avatar >
+      <AvatarContent className="flex items-center justify-center">
+        <Search size={24} />
+      </AvatarContent>
+    </Avatar>
+    <Avatar>
+      <AvatarContent className="bg-blue-300 flex items-center justify-center">
+        <File size={24} />
+      </AvatarContent>
+    </Avatar>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
+
+## All sizes
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+  
+  <Avatar size="small">
+      <AvatarContent className="bg-blue-500">
+       <img
+          src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          alt='Avatar Content Image'
+          className='h-full w-full object-cover'
+        />
+      </AvatarContent>
+    </Avatar>
+
+    <Avatar size="medium">
+      <AvatarContent className="bg-blue-500">
+        <img
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Avatar Content Image"
+          className="h-full w-full object-cover"
+        />
+      </AvatarContent>
+    </Avatar>
+
+    <Avatar size="large">
+      <AvatarContent className="bg-blue-500">
+        <img
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Avatar Content Image"
+          className="h-full w-full object-cover"
+        />
+      </AvatarContent>
+    </Avatar>
+
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+    ```tsx
+import {  Avatar, AvatarImage, AvatarContent, AvatarFallback } from "@groovy-box/ui"
+
+export function AvatarDefault() {
+  return (
+     <Avatar size="small">
+      <AvatarContent className="bg-blue-500">
+       <img
+          src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          alt='Avatar Content Image'
+          className='h-full w-full object-cover'
+        />
+      </AvatarContent>
+    </Avatar>
+
+    <Avatar size="medium">
+      <AvatarContent className="bg-blue-500">
+        <img
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Avatar Content Image"
+          className="h-full w-full object-cover"
+        />
+      </AvatarContent>
+    </Avatar>
+
+    <Avatar size="large">
+      <AvatarContent className="bg-blue-500">
+        <img
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Avatar Content Image"
+          className="h-full w-full object-cover"
+        />
+      </AvatarContent>
+    </Avatar>
+
+);
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
+
+## With fallback
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+    <Avatar>
+    <AvatarFallback>SY</AvatarFallback>
+  </Avatar>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+    ```tsx
+import {  Avatar, AvatarImage, AvatarContent, AvatarFallback } from "@groovy-box/ui"
+
+export function AvatarDefault() {
+  return (
+    <Avatar>
+      <AvatarContent>
+        <img
+          src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+          alt='Avatar Content Image'
+          className='h-full w-full object-cover'
+        />
+      </AvatarContent>
+    </Avatar>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>

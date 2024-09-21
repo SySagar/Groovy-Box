@@ -8,7 +8,7 @@ export * from './components/Label';
 export * from './components/Select';
 export * from './components/Avatar';
 export * from './components/Accordion';
-export * from './components/Navigation-menu';
+// export * from './components/Navigation-menu';
 export * from './components/Switch';
 export * from './components/Toast';
 export * from './components/Progress';

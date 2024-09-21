@@ -26,16 +26,16 @@ const Avatar = React.forwardRef<
   const shapeClass = shape === 'square' ? 'rounded-none' : 'rounded-full';
   const sizeClass =
     size === 'small'
-      ? 'h-6 w-6'
+      ? 'grv-h-6 grv-w-6'
       : size === 'medium'
-        ? 'h-10 w-10'
-        : 'h-16 w-16';
+        ? 'grv-h-10 grv-w-10'
+        : 'grv-h-16 grv-w-16';
 
   return (
     <AvatarPrimitive.Root
       ref={ref}
       className={cn(
-        'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',
+        'grv-relative grv-flex ui grv-h-10 grv-w-10 grv-shrink-0 grv-overflow-hidden grv-rounded-full',
         shapeClass,
         sizeClass,
         className
@@ -52,7 +52,10 @@ const AvatarImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
     ref={ref}
-    className={cn('aspect-square object-cover h-full w-full', className)}
+    className={cn(
+      'grv-aspect-square grv-object-cover grv-h-full grv-w-full',
+      className
+    )}
     {...props}
   />
 ));
@@ -62,7 +65,7 @@ const AvatarContent = React.forwardRef<HTMLDivElement, AvatarContentProps>(
   ({ className, children, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn('aspect-square h-full w-full', className)}
+      className={cn('grv-aspect-square grv-h-full grv-w-full', className)}
       {...props}
     >
       {children}
@@ -79,7 +82,7 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      'flex h-full w-full items-center justify-center rounded-full bg-muted',
+      'grv-flex ui grv-h-full grv-w-full grv-items-center grv-justify-center grv-rounded-full grv-bg-muted',
       className
     )}
     {...props}

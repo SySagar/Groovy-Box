@@ -15,7 +15,7 @@ const ToastViewport = React.forwardRef<
   <ToastPrimitives.Viewport
     ref={ref}
     className={cn(
-      'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]',
+      'grv-fixed grv-top-0 grv-z-[100] grv-flex grv-max-h-screen grv-w-full grv-flex-col-reverse grv-p-4 sm:grv-bottom-0 sm:grv-right-0 sm:grv-top-auto sm:grv-flex-col md:grv-max-w-[420px]',
       className
     )}
     {...props}
@@ -24,13 +24,13 @@ const ToastViewport = React.forwardRef<
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName;
 
 const toastVariants = cva(
-  'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md p-6 pr-8 shadow-lg transition-all ',
+  'grv-group grv-pointer-events-auto grv-relative grv-flex grv-w-full grv-items-center grv-justify-between grv-space-x-4 grv-overflow-hidden grv-rounded-md grv-p-6 grv-pr-8 grv-shadow-lg grv-transition-all ',
   {
     variants: {
       variant: {
-        default: 'bg-background text-foreground',
+        default: 'grv-bg-background grv-text-foreground',
         destructive:
-          'destructive group border-destructive bg-error-900 text-primaryText',
+          'grv-destructive grv-group grv-border-destructive grv-bg-error-900 grv-text-primaryText',
       },
     },
     defaultVariants: {
@@ -49,7 +49,12 @@ const Toast = React.forwardRef<
   return (
     <ToastPrimitives.Root
       ref={ref}
-      className={cn(toastVariants({ variant }), toastRootStyles(), className)}
+      className={cn(
+        toastVariants({ variant }),
+        toastRootStyles(),
+        className,
+        'ui'
+      )}
       {...props}
     />
   );
@@ -63,7 +68,7 @@ const ToastAction = React.forwardRef<
   <ToastPrimitives.Action
     ref={ref}
     className={cn(
-      'inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-1  group-[.destructive]:focus:ring-error-300 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50  group-[.destructive]:hover:bg-error-700/25 group-[.destructive]:hover:text-destructive-foreground',
+      'grv-inline-flex grv-h-8 grv-shrink-0 grv-items-center grv-justify-center grv-rounded-md grv-border grv-bg-transparent grv-px-3 grv-text-sm grv-font-medium grv-ring-offset-background grv-transition-colors hover:grv-bg-secondary focus:grv-outline-none focus:grv-ring-1  group-[.destructive]:focus:grv-ring-error-300 focus:grv-ring-offset-2 disabled:grv-pointer-events-none disabled:grv-opacity-50  group-[.destructive]:hover:grv-bg-error-700/25 group-[.destructive]:hover:grv-text-destructive-foreground',
       className
     )}
     {...props}
@@ -78,13 +83,13 @@ const ToastClose = React.forwardRef<
   <ToastPrimitives.Close
     ref={ref}
     className={cn(
-      'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2  group-[.destructive]:focus:ring-error-300 group-hover:opacity-100',
+      'grv-absolute grv-right-2 grv-top-2 grv-rounded-md grv-p-1 grv-text-foreground/50 grv-opacity-0 grv-transition-opacity hover:grv-text-foreground focus:grv-opacity-100 focus:grv-outline-none focus:grv-ring-2  group-[.destructive]:focus:grv-ring-error-300 group-hover:grv-opacity-100',
       className
     )}
     toast-close=""
     {...props}
   >
-    <X className="h-4 w-4" />
+    <X className="grv-h-4 grv-w-4" />
   </ToastPrimitives.Close>
 ));
 ToastClose.displayName = ToastPrimitives.Close.displayName;
@@ -95,7 +100,7 @@ const ToastTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Title
     ref={ref}
-    className={cn('text-sm font-semibold ', className)}
+    className={cn('grv-text-sm grv-font-semibold ', className)}
     {...props}
   />
 ));
@@ -107,7 +112,7 @@ const ToastDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Description
     ref={ref}
-    className={cn('text-sm opacity-90', className)}
+    className={cn('grv-text-sm grv-opacity-90', className)}
     {...props}
   />
 ));
