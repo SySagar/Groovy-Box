@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import InstallPage from './components/InstallPage';
 import Access from './components/Access';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <main className='flex h-[calc(100vh-56px)] flex-col justify-center text-center'>
+    <main className='flex h-[calc(100vh-56px)] flex-col justify-center items-center text-center relative'>
       <div
         style={{
           display: 'flex',
@@ -23,7 +24,7 @@ export default function HomePage() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '30px',
+              gap: '25px',
               justifyContent: 'center',
               alignItems: 'center',
             }}
@@ -33,15 +34,14 @@ export default function HomePage() {
               application.
             </p>
             <h3
-              className='font-medium text-xl text-appTextSecondaryColor'
+              className='font-medium text-xl text-gray-400'
               style={{
                 width: '50vw',
                 textAlign: 'center',
               }}
             >
-              The official React UI library built on top of Radix UI.
+              Open source components built on top of Radix UI.
             </h3>
-
             <div
               className='meta-container'
               style={{
@@ -49,8 +49,8 @@ export default function HomePage() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: '50px',
-                gap: '2rem',
+                marginTop: '30px',
+                gap: '3rem',
               }}
             >
               <div style={{ position: 'relative' }}>
@@ -61,8 +61,49 @@ export default function HomePage() {
                 <Access />
               </div>
             </div>
+            <div className='stack flex flex-row gap-10 justify-center items-center'>
+              <div className='flex flex-row gap-2 w-full justify-center items-center'>
+                <Image src='/react.svg' alt='react' width={30} height={30} />
+                <p>React.js</p>
+              </div>
+
+              <div className='flex flex-row gap-2 w-full justify-center items-center'>
+                <Image src='/next.svg' alt='next' width={30} height={30} />
+                <p>Next.js</p>
+              </div>
+
+              <div className='flex flex-row gap-2 w-full justify-center items-center'>
+                <Image
+                  src='/tailwind.svg'
+                  alt='tailwind'
+                  width={30}
+                  height={30}
+                />
+                <p className='text-nowrap'>Tailwind css</p>
+              </div>
+
+              <div className='flex flex-row gap-2 w-full pl-2 justify-center items-center'>
+                <Image
+                  src='/framer.png'
+                  alt='framer motion'
+                  width={25}
+                  height={25}
+                />
+                <p className='text-nowrap'>Framer Motion</p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div className='absolute bottom-4 '>
+        Reach out to me via{' '}
+        <a
+          target='_blank'
+          className='underline text-cyan-600'
+          href='https://x.com/SySagar2'
+        >
+          Twitter
+        </a>
       </div>
     </main>
   );
