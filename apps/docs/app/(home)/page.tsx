@@ -2,6 +2,10 @@ import Link from 'next/link';
 import InstallPage from './components/InstallPage';
 import Access from './components/Access';
 import Image from 'next/image';
+import { FaReact } from 'react-icons/fa';
+import { SiNextdotjs } from 'react-icons/si';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { SiFramer } from 'react-icons/si';
 
 export default function HomePage() {
   return (
@@ -63,32 +67,22 @@ export default function HomePage() {
             </div>
             <div className='stack flex flex-row gap-10 justify-center items-center'>
               <div className='flex flex-row gap-2 w-full justify-center items-center'>
-                <Image src='/react.svg' alt='react' width={30} height={30} />
+                <FaReact size={28} />
                 <p>React.js</p>
               </div>
 
               <div className='flex flex-row gap-2 w-full justify-center items-center'>
-                <Image src='/next.svg' alt='next' width={30} height={30} />
+                <SiNextdotjs size={27} />
                 <p>Next.js</p>
               </div>
 
               <div className='flex flex-row gap-2 w-full justify-center items-center'>
-                <Image
-                  src='/tailwind.svg'
-                  alt='tailwind'
-                  width={30}
-                  height={30}
-                />
+                <RiTailwindCssFill size={29} />
                 <p className='text-nowrap'>Tailwind css</p>
               </div>
 
               <div className='flex flex-row gap-2 w-full pl-2 justify-center items-center'>
-                <Image
-                  src='/framer.png'
-                  alt='framer motion'
-                  width={25}
-                  height={25}
-                />
+                <SiFramer size={25} />
                 <p className='text-nowrap'>Framer Motion</p>
               </div>
             </div>
