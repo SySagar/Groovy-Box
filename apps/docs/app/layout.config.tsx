@@ -34,5 +34,18 @@ export const baseOptions: HomeLayoutProps = {
       url: 'https://groovy-box.netlify.app/?path=/docs/components-button--docs',
       active: 'nested-url',
     },
+    {
+      type: 'custom',
+      children: (
+        <a
+          href='https://cal.com/sy-sagar/quick-chat'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-slate-800 border-2 border-slate-500 px-2 py-1 rounded-md text-sm dark:text-blue-500 dark:border-blue-500'
+        >
+          Hire me!
+        </a>
+      ),
+    },
   ],
 };
