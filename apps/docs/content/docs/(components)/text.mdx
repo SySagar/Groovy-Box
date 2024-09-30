@@ -1,0 +1,234 @@
+---
+title: Text
+description: A text based on various sizes
+---
+
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Text } from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper height="900px">
+       <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyItems: 'center',
+        gap:'1rem'
+      }}
+    >
+    
+    <Text variant="body-1">body-1</Text>
+    <Text variant="body-2">body-2</Text>
+    <Text variant="body-3">body-3</Text>
+    <Text variant="button-1">Button-1</Text>
+    <Text variant="button-2">Button-2</Text>
+    <Text variant="heading-1">Heading-1</Text>
+    <Text variant="heading-2">Heading-2</Text>
+    <Text variant="heading-3">Heading-3</Text>
+    <Text variant="heading-4">Heading-4</Text>
+    <Text variant="heading-5">Heading-5</Text>
+    <Text variant="heading-6">Heading-6</Text>
+    <Text variant="label-1">label-1</Text>
+    <Text variant="label-2">label-2</Text>
+    <Text variant="subtitle-1">subtitle-1</Text>
+    <Text variant="subtitle-2">subtitle-2</Text>
+    <Text variant="subtitle-3">subtitle-3</Text>
+    </div>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Text } from "@groovy-box/ui"
+
+export function TextDefault() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyItems: 'center',
+        gap: '1rem',
+      }}
+    >
+      <Text variant='body-1'>body-1</Text>
+      <Text variant='body-2'>body-2</Text>
+      <Text variant='body-3'>body-3</Text>
+      <Text variant='button-1'>Button-1</Text>
+      <Text variant='button-2'>Button-2</Text>
+      <Text variant='heading-1'>Heading-1</Text>
+      <Text variant='heading-2'>Heading-2</Text>
+      <Text variant='heading-3'>Heading-3</Text>
+      <Text variant='heading-4'>Heading-4</Text>
+      <Text variant='heading-5'>Heading-5</Text>
+      <Text variant='heading-6'>Heading-6</Text>
+      <Text variant='label-1'>label-1</Text>
+      <Text variant='label-2'>label-2</Text>
+      <Text variant='subtitle-1'>subtitle-1</Text>
+      <Text variant='subtitle-2'>subtitle-2</Text>
+      <Text variant='subtitle-3'>subtitle-3</Text>
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
+
+## With Tailwind
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper >
+    <div className="p-8">
+         <Text className="grv-text-[#f0a000] grv-underline" variant='heading-3'>With extensible tailwind classes</Text>
+    </div>
+     
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Text } from "@groovy-box/ui"
+
+export function TextTailwindDefault() {
+  return (
+    <div>
+      <div className='p-8'>
+        <Text className='text-[#f0a000] underline' variant='heading-3'>
+          With extensible tailwind classes
+        </Text>
+      </div>
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
+
+## With Alignment: Center
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper >
+    <div className="p-8">
+         <Text alignment="center" variant='body-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
+    </div>
+     
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Text } from "@groovy-box/ui"
+
+export function TextAlignmentDefault() {
+  return (
+    <div>
+      <div className='p-8'>
+        <Text alignment='center' variant='body-1'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </Text>
+      </div>
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
+
+## With Alignment: Left
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper >
+    <div className="p-8">
+         <Text alignment="left" variant='body-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
+    </div>
+     
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Text } from "@groovy-box/ui"
+
+export function TextAlignmentDefault() {
+  return (
+    <div>
+      <div className='p-8'>
+        <Text alignment='left' variant='body-1'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </Text>
+      </div>
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
+
+## With Alignment: Right
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper >
+    <div className="p-8">
+         <Text alignment="right" variant='body-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
+    </div>
+     
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Text } from "@groovy-box/ui"
+
+export function TextAlignmentDefault() {
+  return (
+    <div>
+      <div className='p-8'>
+        <Text alignment='right' variant='body-1'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </Text>
+      </div>
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>
