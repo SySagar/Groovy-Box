@@ -41,7 +41,7 @@ export const baseOptions: HomeLayoutProps = {
           href='https://cal.com/sy-sagar/quick-chat'
           target='_blank'
           rel='noopener noreferrer'
-          className='text-slate-800 border-2 border-slate-500 px-2 py-1 rounded-md text-sm dark:text-blue-500 dark:border-blue-500'
+          className='text-blue-800 border-2 border-blue-500 px-2 py-1 rounded-md text-sm dark:text-blue-500 dark:border-blue-500'
         >
           Hire me!
         </a>

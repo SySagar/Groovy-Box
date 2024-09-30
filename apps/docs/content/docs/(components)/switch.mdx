@@ -1,0 +1,56 @@
+---
+title: Switch
+description: A control that allows the user to toggle between checked and not checked.
+---
+
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Switch, Text } from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+  <ComponenentWrapper>
+       <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyItems: 'center',
+        gap:'1rem',
+        padding:'1rem'
+      }}
+    >
+    <Text variant="Heading-5">Game-mode</Text>
+     <Switch className='SwitchRoot' id='basic-Switch' />
+    </div>
+  </ComponenentWrapper>
+
+  </Tab>
+  <Tab value='Code'>
+  
+```tsx
+import { Switch } from "@groovy-box/ui"
+
+export function SwitchDefault() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'start',
+        flexDirection: 'column',
+        justifyItems: 'center',
+        gap: '1rem',
+      }}
+    >
+      <Switch className='SwitchRoot' id='basic-Switch' />
+    </div>
+  );
+}
+
+    ```
+
+    </Tab>
+
+</Tabs>

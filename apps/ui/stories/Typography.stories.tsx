@@ -105,6 +105,13 @@ export const AllVariants = () => {
         </Text>
       </div>
 
+      {/* Button-2 */}
+      <div style={{ marginBottom: '20px' }}>
+        <Text variant="button-2" color="#2A2C35">
+          Button-2
+        </Text>
+      </div>
+
       {/* Heading-1 */}
       <div style={{ marginBottom: '20px' }}>
         <Text variant="heading-1" color="#2A2C35">
@@ -167,6 +174,20 @@ export const AllVariants = () => {
           subtitle-1
         </Text>
       </div>
+
+      {/* Subtitle-2*/}
+      <div style={{ marginBottom: '20px' }}>
+        <Text variant="subtitle-2" color="#2A2C35">
+          subtitle-2
+        </Text>
+      </div>
+
+      {/* Subtitle-3 */}
+      <div style={{ marginBottom: '20px' }}>
+        <Text variant="subtitle-3" color="#2A2C35">
+          subtitle-3
+        </Text>
+      </div>
     </>
   );
 };
@@ -183,10 +204,9 @@ ColorStory.args = {
 export const withTailwind = () => {
   return (
     <div style={{ marginBottom: '20px' }}>
-      <Text className="text-error-700" color="#f0a">
-        With color props
+      <Text className="grv-text-[#f0a000] grv-underline" variant="heading-1">
+        With extensible tailwind classes
       </Text>
-      <Text variant="heading-1">with tailwind classes</Text>
     </div>
   );
 };

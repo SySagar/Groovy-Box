@@ -40,13 +40,11 @@ export const Text: React.FC<TextProps> = ({
   const mergedClasses = cn(style.text, classNames?.slice(1), props.className);
 
   return (
-    <div>
-      <Comp
-        {...props}
-        className={cn(mergedClasses, 'ui')}
-        style={textStyle}
-        children={children}
-      />
-    </div>
+    <Comp
+      {...props}
+      className={cn(mergedClasses, 'ui')}
+      style={textStyle}
+      children={children}
+    />
   );
 };

@@ -38,7 +38,7 @@ export default function HomePage() {
               application.
             </p>
             <h3
-              className='font-medium text-xl text-gray-400'
+              className='font-medium text-xl dark:text-gray-400 text-gray-600'
               style={{
                 width: '50vw',
                 textAlign: 'center',
