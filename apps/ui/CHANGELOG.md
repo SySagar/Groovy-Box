@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.3.1
+
+### Patch Changes
+
+- 98af8bc: storybook and comp revamped
+
 ## 2.3.0
 
 ### Minor Changes
