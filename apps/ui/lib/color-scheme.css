@@ -1,0 +1,9 @@
+.color-scheme--dark {
+  background-color: #0a0a0a;
+  --text-color: #ffffff;
+}
+
+.color-scheme--light {
+  background-color: #ffffff;
+  --text-color: #000000;
+}

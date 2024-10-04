@@ -21,3 +21,13 @@
   margin: 0; /* Remove default margins */
   padding: 0; /* Remove default paddings */
 }
+
+.color-scheme--light {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+.color-scheme--dark {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
