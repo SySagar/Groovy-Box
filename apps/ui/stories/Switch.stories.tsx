@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-
+import { withGlobalStyles } from '../.storybook/decorator';
 import { Label, Switch } from '../lib';
 
 const DefaultTemplate = () => {
@@ -21,6 +21,7 @@ const DefaultTemplate = () => {
 export default {
   title: 'components/Switch',
   component: DefaultTemplate,
+  decorators: [withGlobalStyles],
 } as Meta;
 
 export const Default = () => {

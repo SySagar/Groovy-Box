@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-
+import { withGlobalStyles } from '../.storybook/decorator';
 import { Progress, Text } from '../lib';
 
 const DefaultTemplate = ({ value = 40 }) => {
@@ -10,11 +10,14 @@ const DefaultTemplate = ({ value = 40 }) => {
         display: 'flex',
         alignItems: 'start',
         flexDirection: 'column',
+        width: '70%',
         justifyItems: 'start',
         gap: '1rem',
       }}
     >
-      <Text variant="heading-4">{value}% complete</Text>
+      <Text alignment="left" variant="heading-4">
+        {value}% complete
+      </Text>
       <Progress value={value} />
     </div>
   );
@@ -23,6 +26,7 @@ const DefaultTemplate = ({ value = 40 }) => {
 export default {
   title: 'components/Progress',
   component: DefaultTemplate,
+  decorators: [withGlobalStyles],
 } as Meta;
 
 export const Default = () => {

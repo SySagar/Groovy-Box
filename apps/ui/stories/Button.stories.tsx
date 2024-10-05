@@ -1,10 +1,12 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
 import { Button } from '../lib';
+import { withGlobalStyles } from '../.storybook/decorator';
 
 export default {
   title: 'Components/Button',
   component: Button,
+  decorators: [withGlobalStyles],
 } as Meta;
 
 export const Variants = () => (

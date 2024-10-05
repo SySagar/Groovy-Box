@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-
+import { withGlobalStyles } from '../.storybook/decorator';
 import { useToast, Button, Toaster, ToastAction } from '../lib';
 
 const DefaultTemplate = () => {
@@ -32,6 +32,7 @@ const DefaultTemplate = () => {
 export default {
   title: 'components/Toast',
   component: DefaultTemplate,
+  decorators: [withGlobalStyles],
 } as Meta;
 
 export const Default = () => {

@@ -10,14 +10,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'grv-bg-primary-700 grv-text-primaryText hover:grv-bg-primary-700/90 grv-border-none',
+          'grv-bg-primary-700 grv-text-text-primary hover:grv-bg-primary-500 grv-border-none',
         destructive:
-          'grv-bg-error-900 grv-text-primaryText hover:grv-bg-error-900/90 grv-border-none grv-outline-0 grv-shadow-none',
+          'grv-bg-error-900 grv-text-text-primary hover:grv-bg-error-700 grv-border-none grv-outline-0 grv-shadow-none',
         outline:
-          ' grv-border-none grv-bg-primary-100/0 hover:grv-bg-primary-700/20 hover:grv-text-accent-foreground grv-outline grv-font-medium grv-outline-1 grv-shadow-none',
+          ' grv-border-none hover:grv-bg-bgopacity grv-text-accent [data-mode="dark"]:grv-text-text-primary  grv-bg-primary-100/0 grv-outline grv-font-medium grv-outline-2 grv-outline-primary-500 grv-shadow-none',
         secondary:
-          'grv-bg-secondary-700 grv-text-primaryText hover:grv-bg-secondary-700/80  grv-border-none grv-outline-0 grv-shadow-none',
-        link: 'grv-text-primary-500 grv-underline-offset-4 hover:grv-underline grv-bg-primary-100/0 grv-font-medium grv-border-none hover:grv-cursor-pointer',
+          'grv-bg-secondary-700 grv-text-text-primary hover:grv-bg-secondary-500  grv-border-none grv-outline-0 grv-shadow-none',
+        link: 'grv-text-primary-300 grv-underline-offset-4 hover:grv-underline grv-bg-primary-100/0 grv-font-medium grv-border-none hover:grv-cursor-pointer',
       },
       size: {
         default: 'grv-h-10 grv-px-4 grv-py-2',

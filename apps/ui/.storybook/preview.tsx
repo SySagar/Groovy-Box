@@ -1,5 +1,7 @@
 // https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
 import '../lib/tailwind.css';
+import '../lib/color-scheme.css';
+import { withGlobalStyles } from './decorator';
 
 const customViewports = {
   xs: {
@@ -50,5 +52,18 @@ export const parameters = {
   },
   visualViewport: {
     customViewports,
+  },
+};
+
+export const globalTypes = {
+  scheme: {
+    name: 'Scheme',
+    description: 'Select light or dark',
+    defaultValue: 'light',
+    toolbar: {
+      icon: 'mirror',
+      items: ['light', 'dark'],
+      dynamicTitle: true,
+    },
   },
 };
