@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.3.2
+
+### Patch Changes
+
+- ce42ddf: color revamp with theming for light adn dark mode
+
 ## 2.3.1
 
 ### Patch Changes
