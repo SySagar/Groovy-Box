@@ -2,6 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Global Colors - light theme */
+  :root {
+    --primary-100: 101, 106, 128;
+    --primary-300: 79, 83, 100;
+    --primary-500: 56, 59, 71;
+    --primary-700: 42, 44, 53;
+    --primary-900: 35, 37, 45;
+
+    --secondary-100: 211, 222, 241;
+    --secondary-300: 99, 133, 196;
+    --secondary-500: 63, 114, 175;
+    --secondary-700: 55, 100, 153;
+    --secondary-900: 49, 88, 134;
+
+    --success-100: 155, 228, 180;
+    --success-300: 115, 217, 149;
+    --success-500: 105, 214, 142;
+    --success-700: 75, 206, 119;
+    --success-900: 49, 180, 94;
+
+    --error-100: 255, 142, 140;
+    --error-300: 253, 108, 120;
+    --error-500: 245, 62, 77;
+    --error-700: 227, 38, 54;
+    --error-900: 198, 0, 34;
+
+    --warning-100: 255, 239, 195;
+    --warning-300: 255, 229, 156;
+    --warning-500: 255, 226, 143;
+    --warning-700: 255, 222, 128;
+    --warning-900: 222, 193, 110;
+
+    --text-primary: 235, 235, 235;
+    --text-secondary: 30, 30, 30;
+
+    --accent: 0, 0, 0;
+    --background-paper: white;
+    --background-opacity: 0, 0, 0, 0.05;
+  }
+
+  /* Dark Mode Colors */
+  .dark {
+    --primary-100: 101, 106, 128;
+    --primary-300: 79, 83, 100;
+    --primary-500: 56, 59, 71;
+    --primary-700: 42, 44, 53;
+    --primary-900: 35, 37, 45;
+
+    --secondary-100: 186, 205, 233;
+    --secondary-300: 74, 122, 176;
+    --secondary-500: 52, 97, 149;
+    --secondary-700: 46, 84, 130;
+    --secondary-900: 40, 73, 112;
+
+    --success-100: 142, 220, 177;
+    --success-300: 99, 198, 140;
+    --success-500: 88, 195, 131;
+    --success-700: 63, 182, 108;
+    --success-900: 42, 155, 84;
+
+    --error-100: 255, 115, 112;
+    --error-300: 240, 87, 92;
+    --error-500: 217, 55, 60;
+    --error-700: 192, 26, 48;
+    --error-900: 172, 0, 31;
+
+    --warning-100: 240, 230, 167;
+    --warning-300: 228, 208, 138;
+    --warning-500: 224, 192, 127;
+    --warning-700: 208, 192, 112;
+    --warning-900: 187, 167, 81;
+
+    --text-primary: 245, 245, 245;
+    --text-secondary: 23, 23, 23;
+
+    --accent: 255, 245, 245;
+    --background-paper: 253, 253, 253;
+
+    --background-opacity: 253, 253, 253, 0.1;
+  }
+}
+
 .ui blockquote,
 .ui dl,
 .ui dd,
@@ -17,17 +100,7 @@
 .ui span,
 .ui p,
 .ui pre {
-  all: unset; /* Unsets all the properties */
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default paddings */
-}
-
-.color-scheme--light {
-  --background-color: #ffffff;
-  --text-color: #000000;
-}
-
-.color-scheme--dark {
-  --background-color: #333333;
-  --text-color: #ffffff;
+  all: unset;
+  margin: 0;
+  padding: 0;
 }

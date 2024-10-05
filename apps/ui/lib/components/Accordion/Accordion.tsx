@@ -23,7 +23,7 @@ const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="grv-flex grv-text-primary-500 typo-body-1">
+  <AccordionPrimitive.Header className="grv-flex grv-text-primary-100 typo-body-1">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
@@ -53,7 +53,9 @@ const AccordionContent = React.forwardRef<
     className={accordionContentStyles()}
     {...props}
   >
-    <div className={cn('grv-pb-4 grv-pt-0', className)}>{children}</div>
+    <div className={cn('grv-pb-4 grv-pt-0 grv-text-accent', className)}>
+      {children}
+    </div>
   </AccordionPrimitive.Content>
 ));
 

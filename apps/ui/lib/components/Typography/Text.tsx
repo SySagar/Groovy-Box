@@ -42,7 +42,7 @@ export const Text: React.FC<TextProps> = ({
   return (
     <Comp
       {...props}
-      className={cn(mergedClasses, 'ui')}
+      className={cn('grv-text-accent', mergedClasses, 'ui')}
       style={textStyle}
       children={children}
     />

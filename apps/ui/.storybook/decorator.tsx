@@ -1,7 +1,16 @@
 import React from 'react';
+import { useEffect } from 'react';
 
 export function withGlobalStyles(Story, context) {
   let { scheme } = context.globals;
+
+  useEffect(() => {
+    if (scheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [scheme]);
 
   function Flex({ children, ...props }) {
     return (

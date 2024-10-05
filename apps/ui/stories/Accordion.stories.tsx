@@ -1,5 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import { withGlobalStyles } from '../.storybook/decorator';
 
 import {
   Accordion,
@@ -9,7 +10,7 @@ import {
 } from '../lib';
 
 const Test = () => (
-  <div className="w-80">
+  <div className="grv-w-80">
     <Accordion type="single" defaultValue="item-1" collapsible>
       <AccordionItem value="item-1">
         <AccordionTrigger>Accordion 1</AccordionTrigger>
@@ -30,6 +31,7 @@ const Test = () => (
 export default {
   title: 'components/Accordion',
   component: Test,
+  decorators: [withGlobalStyles],
 } as Meta;
 
 export const Default = () => <Test />;
