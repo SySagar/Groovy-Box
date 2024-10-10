@@ -1,0 +1,54 @@
+{
+    "components": {
+      "Button": {
+        "type": "basic",
+        "files": [
+          {
+            "name": "Button.tsx",
+            "path": "/packages/ui/src/components/Button/Button.tsx",
+            "content": "import React from 'react';\n\ninterface ButtonProps {\n  // ... button props\n}\n\nexport const Button: React.FC<ButtonProps> = ({ children, ...props }) => {\n  return <button {...props}>{children}</button>;\n};"
+          },
+          {
+            "name": "Button.css",
+            "path": "/packages/ui/src/components/Button/Button.css",
+            "content": ".button {\n  // ... button styles\n}"
+          }
+        ],
+        "dependencies": {}
+      },
+      "Carousel": {
+        "type": "custom",
+        "files": [
+          {
+            "name": "Carousel.tsx",
+            "path": "/packages/ui/src/components/Carousel/Carousel.tsx",
+            "content": "import React from 'react';\nimport { motion } from 'framer-motion';\n\ninterface CarouselProps {\n  // ... carousel props\n}\n\nexport const Carousel: React.FC<CarouselProps> = ({ children }) => {\n  return (\n    <motion.div>\n      {/* Carousel implementation */}\n      {children}\n    </motion.div>\n  );\n};"
+          },
+          {
+            "name": "Carousel.css",
+            "path": "/packages/ui/src/components/Carousel/Carousel.css",
+            "content": ".carousel {\n  // ... carousel styles\n}"
+          }
+        ],
+        "dependencies": {
+          "framer-motion": "^4.1.17"
+        }
+      },
+      "Card": {
+        "type": "custom",
+        "files": [
+          {
+            "name": "Card.tsx",
+            "path": "/packages/ui/src/components/Card/Card.tsx",
+            "content": "import React from 'react';\n\ninterface CardProps {\n  // ... card props\n}\n\nexport const Card: React.FC<CardProps> = ({ children, ...props }) => {\n  return <div className=\"card\" {...props}>{children}</div>;\n};"
+          },
+          {
+            "name": "Card.css",
+            "path": "/packages/ui/src/components/Card/Card.css",
+            "content": ".card {\n  // ... card styles\n}"
+          }
+        ],
+        "dependencies": {}
+      }
+    }
+  }
