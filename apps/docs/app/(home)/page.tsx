@@ -2,10 +2,7 @@ import Link from 'next/link';
 import InstallPage from './components/InstallPage';
 import Access from './components/Access';
 import Image from 'next/image';
-import { FaReact } from 'react-icons/fa';
-import { SiNextdotjs } from 'react-icons/si';
-import { RiTailwindCssFill } from 'react-icons/ri';
-import { SiFramer } from 'react-icons/si';
+import Carousel from './components/Stack';
 
 export default function HomePage() {
   return (
@@ -33,14 +30,13 @@ export default function HomePage() {
               alignItems: 'center',
             }}
           >
-            <p className=' font-bold w-2/3 text-center text-5xl'>
+            <p className=' font-bold w-5/6 sm:w-2/3 text-center text-xl sm:text-2xl md:text-3xl lg:text-5xl'>
               Beautifully crafted components for your next big front-end
               application.
             </p>
             <h3
-              className='font-medium text-xl dark:text-gray-400 text-gray-600'
+              className='font-medium text-sm w-4/6 sm:w-xl md:text-xl md:text-md dark:text-gray-400 text-gray-600'
               style={{
-                width: '50vw',
                 textAlign: 'center',
               }}
             >
@@ -65,31 +61,11 @@ export default function HomePage() {
                 <Access />
               </div>
             </div>
-            <div className='stack flex flex-row gap-10 justify-center items-center'>
-              <div className='flex flex-row gap-2 w-full justify-center items-center'>
-                <FaReact size={28} />
-                <p>React.js</p>
-              </div>
-
-              <div className='flex flex-row gap-2 w-full justify-center items-center'>
-                <SiNextdotjs size={27} />
-                <p>Next.js</p>
-              </div>
-
-              <div className='flex flex-row gap-2 w-full justify-center items-center'>
-                <RiTailwindCssFill size={29} />
-                <p className='text-nowrap'>Tailwind css</p>
-              </div>
-
-              <div className='flex flex-row gap-2 w-full pl-2 justify-center items-center'>
-                <SiFramer size={25} />
-                <p className='text-nowrap'>Framer Motion</p>
-              </div>
-            </div>
+            <Carousel />
           </div>
         </div>
       </div>
-      <div className='absolute bottom-4 '>
+      <div className='absolute bottom-4 text-sm sm:text-md'>
         Reach out to me via{' '}
         <a
           target='_blank'
