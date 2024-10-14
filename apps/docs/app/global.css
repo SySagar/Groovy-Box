@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-190%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 7s linear infinite; /* Adjust duration as needed */
+}
