@@ -3,7 +3,7 @@ import { Copy, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Wrapper = ({ children }) => {
-  const textToCopy = 'npm install gitemo-cli -g';
+  const textToCopy = 'npm i @groovy-box/ui';
 
   const [copySuccess, setCopySuccess] = React.useState('');
 
