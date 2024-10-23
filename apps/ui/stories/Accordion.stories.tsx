@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '../lib';
+import exp from 'constants';
 
 const Test = () => (
   <div className="grv-w-80">
@@ -28,6 +29,19 @@ const Test = () => (
   </div>
 );
 
+const withTailwind = ()=>{
+  return (
+    <div className="grv-w-80">
+      <Accordion type="single" defaultValue="item-1" collapsible>
+        <AccordionItem value="item-1" className='grv-border-b-0'>
+          <AccordionTrigger>Accordion 1</AccordionTrigger>
+          <AccordionContent>Content 1</AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </div>
+  );
+}
+
 export default {
   title: 'components/Accordion',
   component: Test,
@@ -35,3 +49,4 @@ export default {
 } as Meta;
 
 export const Default = () => <Test />;
+export const WithTailwind = () => withTailwind();

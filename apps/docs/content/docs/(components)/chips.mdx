@@ -1,0 +1,207 @@
+---
+title: Chip
+description: Various types and configurations of Chip component.
+---
+
+## Default
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Chip, Avatar, AvatarImage, AvatarFallback } from '@/app/ui';
+import ComponenentWrapper from '@/app/ui/ComponenentWrapper';
+import { Star, Mail } from 'lucide-react';
+import { ChipEle } from '@/app/ui/IndividialComp';
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+    <ComponenentWrapper>
+      <div className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+        <Chip>Default</Chip>
+      </div>
+    </ComponenentWrapper>
+  </Tab>
+
+  <Tab value='Code'>
+    ```tsx
+    import { Chip } from "@groovy-box/ui";
+
+    export function ChipDefault() {
+      return (
+        <div className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+          <Chip>Default</Chip>
+        </div>
+      );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+## Variants
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+    <ComponenentWrapper>
+      <div className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+        <Chip variant="filled">Filled</Chip>
+        <Chip variant="outlined">Outlined</Chip>
+      </div>
+    </ComponenentWrapper>
+  </Tab>
+
+  <Tab value='Code'>
+    ```tsx
+    import { Chip } from "@groovy-box/ui";
+
+    export function ChipVariants() {
+      return (
+        <div className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+          <Chip variant="filled">Filled</Chip>
+          <Chip variant="outlined">Outlined</Chip>
+        </div>
+      );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+## Sizes
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+    <ComponenentWrapper>
+      <div className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+        <Chip size="sm">Small</Chip>
+        <Chip size="md">Medium</Chip>
+        <Chip size="lg">Large</Chip>
+      </div>
+    </ComponenentWrapper>
+  </Tab>
+
+  <Tab value='Code'>
+    ```tsx
+    import { Chip } from "@groovy-box/ui";
+
+    export function ChipSizes() {
+      return (
+        <div className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+          <Chip size="sm">Small</Chip>
+          <Chip size="md">Medium</Chip>
+          <Chip size="lg">Large</Chip>
+        </div>
+      );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+## With Icons
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+    <ComponenentWrapper>
+      <div 
+       supressHydrationWarning
+      className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+        <Chip
+         supressHydrationWarning
+          beforeChildren={
+            <Avatar>
+              <AvatarImage
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Avatar Image"
+              />
+              <AvatarFallback>AB</AvatarFallback>
+            </Avatar>
+          }
+        >
+          User Chip
+        </Chip>
+        <Chip variant="outlined" afterChildren={<Star className="grv-h-4 grv-w-4" />}>
+          Starred
+        </Chip>
+        <Chip
+          beforeChildren={<Mail className="grv-h-4 grv-w-4" />}
+          afterChildren={
+            <span className="grv-bg-primary-foreground grv-text-primary grv-rounded-full grv-px-2 grv-text-sm">
+              99+
+            </span>
+          }
+        >
+          Inbox
+        </Chip>
+      </div>
+    </ComponenentWrapper>
+  </Tab>
+
+  <Tab value='Code'>
+    ```tsx
+    import { Chip, Avatar, AvatarImage, AvatarFallback } from "@groovy-box/ui";
+    import { Star, Mail } from 'lucide-react';
+
+    export function ChipWithIcons() {
+      return (
+        <div
+         supressHydrationWarning
+         className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+          <Chip
+            beforeChildren={
+              <Avatar>
+                <AvatarImage
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Avatar Image"
+                />
+                <AvatarFallback>AB</AvatarFallback>
+              </Avatar>
+            }
+          >
+            User Chip
+          </Chip>
+          <Chip variant="outlined" afterChildren={<Star className="grv-h-4 grv-w-4" />}>
+            Starred
+          </Chip>
+          <Chip
+            beforeChildren={<Mail className="grv-h-4 grv-w-4" />}
+            afterChildren={
+              <span className="grv-bg-primary-foreground grv-text-primary grv-rounded-full grv-px-2 grv-text-sm">
+                99+
+              </span>
+            }
+          >
+            Inbox
+          </Chip>
+        </div>
+      );
+    }
+    ```
+
+  </Tab>
+</Tabs>
+
+## Interactions
+
+<Tabs items={['Preview', 'Code']}>
+  <Tab value='Preview'>
+    <ComponenentWrapper>
+     <ChipEle/>
+    </ComponenentWrapper>
+  </Tab>
+
+  <Tab value='Code'>
+    ```tsx
+    import { Chip } from "@groovy-box/ui";
+
+    export function ChipInteractions() {
+      return (
+        <div className="grv-flex grv-flex-wrap grv-gap-4 grv-p-4">
+          <Chip clickable onClick={() => alert('Clicked!')}>Clickable</Chip>
+          <Chip onDelete={() => alert('Delete clicked!')}>Deletable</Chip>
+          <Chip href="https://ui.soumyasagar.in" target="_blank">Link</Chip>
+        </div>
+      );
+    }
+    ```
+
+  </Tab>
+</Tabs>
