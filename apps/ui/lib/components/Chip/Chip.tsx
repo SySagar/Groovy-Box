@@ -1,22 +1,22 @@
+'use client';
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { X as CloseIcon } from 'lucide-react';
-import { Text } from '../Typography';
 
 import { cn } from '@utils/utils';
 
 const chipVariants = cva(
-  'grv-inline-flex grv-items-center grv-rounded-full grv-text-sm grv-font-medium grv-transition-colors focus:grv-outline-none focus:grv-ring-2 grv-ring-ring grv-ring-offset-2',
+  'grv-inline-flex ui grv-items-center grv-rounded-full grv-text-sm grv-font-medium grv-transition-colors focus:grv-outline-none focus:grv-ring-2 grv-ring-ring grv-ring-offset-2',
   {
     variants: {
       variant: {
-        filled: 'grv-bg-primary-500',
-        outlined: 'grv-border-2 grv-border-solid grv-border-accent',
+        filled: 'grv-bg-primary-500 ui',
+        outlined: 'grv-border-2 grv-border-solid grv-border-accent ui',
       },
       size: {
-        sm: 'grv-h-6 grv-px-3',
-        md: 'grv-h-8 grv-px-4',
-        lg: 'grv-h-10 grv-px-5',
+        sm: 'grv-h-6 grv-px-3 ui',
+        md: 'grv-h-8 grv-px-4 ui',
+        lg: 'grv-h-10 grv-px-5 ui',
       },
       clickable: {
         true: 'grv-cursor-pointer',
@@ -78,12 +78,21 @@ const Chip = React.forwardRef<HTMLDivElement | HTMLAnchorElement, ChipProps>(
     const textColor =
       variant === 'outlined' ? 'grv-text-accent' : 'grv-text-text-primary';
 
+    console.log(size);
+
+    const textSize =
+      size === 'sm'
+        ? 'grv-text-[10px]'
+        : size === 'md'
+          ? 'grv-text-[12px]'
+          : 'grv-text-[14px]';
+
     return (
       <Component
         ref={ref}
         className={cn(
           chipVariants({ variant, size, clickable: isClickable }),
-          'grv-decoration-primary-100 grv-underline-offset-2 grv-flex grv-overflow-hidden',
+          'grv-decoration-primary-100 grv-underline-offset-2 grv-flex grv-overflow-hidden ui',
           className
         )}
         {...(href && { href })}
@@ -92,19 +101,17 @@ const Chip = React.forwardRef<HTMLDivElement | HTMLAnchorElement, ChipProps>(
         {beforeChildren && (
           <div
             className={cn(
-              'grv-flex grv-items-center grv-justify-center grv-text-text-primary grv-mr-2 grv-w-[20px] grv-h-[20px]  grv-overflow-hidden grv-rounded-full grv-object-cover'
+              'grv-flex grv-items-center grv-justify-center grv-text-text-primary grv-mr-2 grv-w-[20px] grv-h-[20px] ui grv-overflow-hidden grv-rounded-full grv-object-cover'
             )}
           >
             {beforeChildren}
           </div>
         )}
-        <Text variant="label-2" className={textColor}>
-          {children}
-        </Text>
+        <div className={cn(textColor, textSize)}>{children}</div>
         {afterChildren && (
           <div
             className={cn(
-              `grv-flex grv-items-center grv-justify-center ${textColor} grv-ml-2`
+              `grv-flex grv-items-center grv-justify-center ${textColor} grv-ml-2 ui`
             )}
           >
             {afterChildren}
@@ -113,10 +120,8 @@ const Chip = React.forwardRef<HTMLDivElement | HTMLAnchorElement, ChipProps>(
         {onDelete && (
           <div
             className={cn(
-              'grv-ml-2 grv-rounded-full grv-bg-text-primary grv-cursor-pointer  grv-p-[1px] grv-px-[6px] grv-transition-colors grv-text-primary grv-opacity-50 hover:grv-opacity-60'
-              //   variant === 'filled'
-              //     ? 'hover:grv-bg-primary-500 hover:grv-bg-opacity-5'
-              //     : 'hover:grv-bg-primary-500 hover:grv-bg-opacity-5'
+              'grv-ml-2 grv-rounded-full grv-bg-text-primary grv-cursor-pointer  grv-py-[4px] grv-px-[4px] grv-transition-colors grv-text-primary grv-opacity-50 hover:grv-opacity-60',
+              textSize
             )}
             onClick={(e) => {
               e.stopPropagation();

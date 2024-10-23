@@ -33,7 +33,7 @@ const ChipInteractions = () => (
       Clickable
     </Chip>
     <Chip onDelete={() => alert('Delete clicked!')}>Deletable</Chip>
-    <Chip href="https://example.com" target="_blank">
+    <Chip href="https://ui.soumyasagar.in" target="_blank">
       Link
     </Chip>
   </div>
