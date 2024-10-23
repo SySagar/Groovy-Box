@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.3.3
+
+### Patch Changes
+
+- 05de4f0: chip components
+
 ## 2.3.2
 
 ### Patch Changes
