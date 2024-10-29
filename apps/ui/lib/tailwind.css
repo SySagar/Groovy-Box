@@ -39,7 +39,7 @@
     --text-secondary: 30, 30, 30;
 
     --accent: 0, 0, 0;
-    --background-paper: white;
+    --background-paper: 255 255 255;
     --background-opacity: 0, 0, 0, 0.05;
   }
 

@@ -41,6 +41,14 @@ export const tailwindButton = () => {
   return <Button className="bg-warning-500 text-secondaryText">Hello</Button>;
 };
 
+export const tailwindButtonWithOverridingVariant = () => {
+  return (
+    <Button variant={'outline'} className="grv-bg-[#ff0f] grv-outline-[#1fa]">
+      Hello
+    </Button>
+  );
+};
+
 export const Sizes = () => (
   <div
     style={{

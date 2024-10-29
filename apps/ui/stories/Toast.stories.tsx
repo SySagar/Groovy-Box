@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { withGlobalStyles } from '../.storybook/decorator';
 import { useToast, Button, Toaster, ToastAction } from '../lib';
 
-const DefaultTemplate = () => {
+export const Default = () => {
   const { toast } = useToast();
   return (
     <div
@@ -31,15 +31,11 @@ const DefaultTemplate = () => {
 
 export default {
   title: 'components/Toast',
-  component: DefaultTemplate,
+  component: Default,
   decorators: [withGlobalStyles],
 } as Meta;
 
-export const Default = () => {
-  return <DefaultTemplate />;
-};
-
-const DestructiveTemplate = () => {
+export const Destructive = () => {
   const { toast } = useToast();
   return (
     <div
@@ -66,11 +62,7 @@ const DestructiveTemplate = () => {
   );
 };
 
-export const Destructive = () => {
-  return <DestructiveTemplate />;
-};
-
-const DestructiveTemplateWithActionButton = () => {
+export const DestructiveWithActionButton = () => {
   const { toast } = useToast();
   return (
     <div
@@ -96,8 +88,4 @@ const DestructiveTemplateWithActionButton = () => {
       </Button>
     </div>
   );
-};
-
-export const DestructiveWithActionButton = () => {
-  return <DestructiveTemplateWithActionButton />;
 };

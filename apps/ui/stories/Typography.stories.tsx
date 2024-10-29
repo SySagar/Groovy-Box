@@ -221,6 +221,19 @@ export const withTailwindAndVariant = () => {
   );
 };
 
+export const withTailwindAndVariant2 = () => {
+  return (
+    <div style={{ marginBottom: '20px' }}>
+      <Text
+        variant="heading-1"
+        className="grv-text-[#a0c] grv-text-[10px] grv-font-light"
+      >
+        with tailwind classes and variant
+      </Text>
+    </div>
+  );
+};
+
 // Alignment Center
 export const AlignmentCenterStory = Template.bind({});
 AlignmentCenterStory.args = {
