@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.3.4
+
+### Patch Changes
+
+- bc83ba8: button tialwind clashes and typography variants
+
 ## 2.3.3
 
 ### Patch Changes
