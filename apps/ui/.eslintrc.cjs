@@ -14,6 +14,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/no-children-prop': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   parserOptions: {
     project: true,
