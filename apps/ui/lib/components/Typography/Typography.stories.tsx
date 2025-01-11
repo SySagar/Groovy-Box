@@ -213,7 +213,7 @@ export const withTailwind = () => {
 export const withTailwindAndVariant = () => {
     return (
         <div style={{ marginBottom: '20px' }}>
-            <Text variant="heading-1" className="text-error-700">
+            <Text variant="heading-1" className="grv-text-error-700">
                 with tailwind classes and variant
             </Text>
         </div>

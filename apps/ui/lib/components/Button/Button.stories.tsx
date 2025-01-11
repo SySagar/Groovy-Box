@@ -36,16 +36,9 @@ export const Variants = () => (
 );
 
 export const tailwindButton = () => {
-    return <Button className="bg-warning-500 text-secondaryText">Hello</Button>;
+    return <Button className="grv-bg-warning-700 grv-text-text-secondary hover:grv-bg-warning-500 grv-font-bold">Hello</Button>;
 };
 
-export const tailwindButtonWithOverridingVariant = () => {
-    return (
-        <Button variant={'outline'} className="grv-bg-[#ff0f] grv-outline-[#1fa]">
-            Hello
-        </Button>
-    );
-};
 
 export const Sizes = () => (
     <div
