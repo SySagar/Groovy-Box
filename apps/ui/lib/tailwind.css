@@ -36,11 +36,12 @@
     --warning-900: 222, 193, 110;
 
     --text-primary: 235, 235, 235;
-    --text-secondary: 30, 30, 30;
+    --text-secondary: 93, 97, 102;
 
     --accent: 0, 0, 0;
     --background-paper: 255 255 255;
     --background-opacity: 0, 0, 0, 0.05;
+    --background-overlay: 0, 0, 0, 0.7;
   }
 
   /* Dark Mode Colors */
@@ -76,12 +77,13 @@
     --warning-900: 187, 167, 81;
 
     --text-primary: 245, 245, 245;
-    --text-secondary: 23, 23, 23;
+    --text-secondary: 102, 98, 93;
 
     --accent: 255, 245, 245;
     --background-paper: 253, 253, 253;
 
     --background-opacity: 253, 253, 253, 0.1;
+    --background-overlay: 0, 0, 0, 0.7;
   }
 }
 

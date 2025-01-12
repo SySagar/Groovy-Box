@@ -19,6 +19,23 @@ module.exports = {
         extend: {
             fontFamily: groovyFontFamily,
         },
+        keyframes: {
+            overlayShow: {
+                from: { opacity: "0" },
+                to: { opacity: "1" },
+            },
+            contentShow: {
+                from: {
+                    opacity: "0",
+                    transform: "translate(-50%, -48%) scale(0.96)",
+                },
+                to: { opacity: "1", transform: "translate(-50%, -50%) scale(1)" },
+            },
+        },
+        animation: {
+            overlayShow: "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+            contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        },
         colors: {
             primary: {
                 100: 'rgb(var(--primary-100))',
@@ -62,6 +79,7 @@ module.exports = {
             accent: 'rgb(var(--accent))',
             backgroundPaper: 'rgb(var(--background-paper))',
             bgopacity: 'rgb(var( --background-opacity))',
+            bgOverlay: 'rgb(var(--background-overlay))',
         },
         fontWeight: {
             thin: '100',
@@ -70,6 +88,9 @@ module.exports = {
             medium: '500',
             semibold: '600',
             bold: '700',
+        },
+        fontFamily: {
+            sans: ['"Inter var"', 'system-ui', 'sans-serif']
         },
     },
     plugins: [

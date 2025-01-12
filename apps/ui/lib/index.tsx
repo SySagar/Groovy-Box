@@ -13,3 +13,4 @@ export * from './components/Switch';
 export * from './components/Toast';
 export * from './components/Progress';
 export * from './components/Chip';
+export * from './components/Modal';
