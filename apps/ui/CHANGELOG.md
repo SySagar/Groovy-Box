@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.4.0
+
+### Minor Changes
+
+- 370613b: storybook directory change, modal component, textfield and button component revamp
+
 ## 2.3.4
 
 ### Patch Changes
