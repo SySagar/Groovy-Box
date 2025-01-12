@@ -1,175 +1,219 @@
-import { TextField } from '../..';
+import type { Meta, StoryObj } from '@storybook/react';
+import { TextField } from './index';
+import { Mail, Lock, Eye, EyeOff, Search, User, Check, AlertCircle } from 'lucide-react';
+import { useState } from 'react';
+import { Button } from '../Button';
 
-export default {
-  title: 'Components/TextField',
-  component: TextField,
-  argTypes: {
-    variant: {
-      options: ['filled', 'outlined', 'standard'],
-      control: { type: 'radio' },
+const meta: Meta<typeof TextField.Root> = {
+    title: 'Components/TextField',
+    component: TextField.Root,
+    tags: ['autodocs'],
+    argTypes: {
+        variant: {
+            control: 'select',
+            options: ['standard', 'outlined', 'filled'],
+            description: 'The visual style of the text field',
+        },
+        size: {
+            control: 'select',
+            options: ['sm', 'md', 'lg'],
+            description: 'The size of the text field',
+        },
+        error: {
+            control: 'boolean',
+            description: 'Whether the text field is in an error state',
+        },
     },
-    size: {
-      options: ['sm', 'md', 'lg'],
-      control: { type: 'radio' },
-    },
-    type: {
-      options: ['password', 'number', 'email', 'text'],
-      control: { type: 'radio' },
-    },
-    color: {
-      options: ['primary', 'secondary'],
-      control: { type: 'radio' },
-    },
-    placeholder: {
-      control: { type: 'text' },
-    },
-    disabled: {
-      control: { type: 'boolean' },
-    },
-    required: {
-      control: { type: 'boolean' },
-    },
-    readOnly: {
-      control: { type: 'boolean' },
-    },
-    fullWidth: {
-      control: { type: 'boolean' },
-    },
-    multiline: {
-      control: { type: 'boolean' },
-    },
-    rows: {
-      control: { type: 'number' },
-    },
-    rowsMax: {
-      control: { type: 'number' },
-    },
-    startIcon: {
-      control: { type: 'text' },
-    },
-    endIcon: {
-      control: { type: 'text' },
-    },
-    onChange: {
-      control: { type: 'text' },
-    },
-    onClick: {
-      control: { type: 'text' },
-    },
-    onFocus: {
-      control: { type: 'text' },
-    },
-    onBlur: {
-      control: { type: 'text' },
-    },
-    onKeyPress: {
-      control: { type: 'text' },
-    },
-    onKeyUp: {
-      control: { type: 'text' },
-    },
-    onKeyDown: {
-      control: { type: 'text' },
-    },
-  },
 };
 
-export const Default = (args: any) => <TextField {...args} />;
+export default meta;
+type Story = StoryObj<typeof TextField.Root>;
 
-Default.args = {
-  label: 'Label',
-  placeholder: 'Placeholder',
-  startIcon: '👋',
-  endIcon: '👋',
+// Basic TextField
+export const Basic: Story = {
+    render: (args) => (
+        <TextField.Root {...args}>
+            <TextField.Input placeholder="Enter text" />
+        </TextField.Root>
+    ),
 };
 
-export const Colors = (args: any) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '1rem',
-    }}
-  >
-    <div>
-      <TextField {...args} color="primary" />
-    </div>
-    <div>
-      <TextField {...args} color="secondary" />
-    </div>
-  </div>
-);
+// With Icons
+export const WithIcons: Story = {
+    render: () => (
+        <div className="grv-space-y-4">
+            <TextField.Root variant={'outlined'}>
+                <TextField.Icon position="start">
+                    <Mail className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+                <TextField.Input placeholder="Enter email" />
+            </TextField.Root>
 
-Colors.args = {
-  variant: 'filled',
+            <TextField.Root variant={'outlined'}>
+                <TextField.Icon position="start">
+                    <Search className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+                <TextField.Input placeholder="Search..." />
+                <TextField.Icon position="end">
+                    <AlertCircle className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+            </TextField.Root>
+        </div>
+    ),
 };
 
-export const Variants = (args: any) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '1rem',
-    }}
-  >
-    <div>
-      <TextField {...args} variant="outlined" />
-    </div>
-    <div>
-      <TextField {...args} variant="filled" />
-    </div>
-  </div>
-);
-
-Variants.args = {
-  color: 'primary',
+// Password Input with Toggle
+export const PasswordInput: Story = {
+    render: () => {
+        const [showPassword, setShowPassword] = useState(false);
+        return (
+            <TextField.Root variant={'outlined'}>
+                <TextField.Icon position="start">
+                    <Lock className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+                <TextField.Input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter password"
+                />
+                <TextField.Icon position="end">
+                    <Button
+                        variant={'outline'}
+                        onClick={() => setShowPassword(!showPassword)}
+                    >
+                        {showPassword ? (
+                            <EyeOff className="grv-w-4 grv-h-4" />
+                        ) : (
+                            <Eye className="grv-w-4 grv-h-4" />
+                        )}
+                    </Button>
+                </TextField.Icon>
+            </TextField.Root>
+        );
+    },
 };
 
-export const Sizes = (args: any) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '1rem',
-    }}
-  >
-    <div>
-      <TextField {...args} size="sm" />
-    </div>
-    <div>
-      <TextField {...args} size="md" />
-    </div>
-    <div>
-      <TextField {...args} size="lg" />
-    </div>
-  </div>
-);
+// Different Variants
+export const Variants: Story = {
+    render: () => (
+        <div className="grv-space-y-4">
+            <TextField.Root variant="standard">
+                <TextField.Input placeholder="Standard variant" />
+            </TextField.Root>
 
-Sizes.args = {
-  color: 'primary',
+            <TextField.Root variant="outlined">
+                <TextField.Input placeholder="Outlined variant" />
+            </TextField.Root>
+
+            <TextField.Root variant="filled">
+                <TextField.Input placeholder="Filled variant" />
+            </TextField.Root>
+        </div>
+    ),
 };
 
-export const Multiline = (args: any) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '1rem',
-    }}
-  >
-    <div>
-      <TextField {...args} multiline rows={4} />
-    </div>
-    <div>
-      <TextField {...args} multiline rows={4} variant="outlined" />
-    </div>
-  </div>
-);
+// Different Sizes
+export const Sizes: Story = {
+    render: () => (
+        <div className="grv-space-y-4">
+            <TextField.Root variant={'outlined'} size="sm">
+                <TextField.Input placeholder="Small size" />
+            </TextField.Root>
+
+            <TextField.Root variant={'outlined'} size="md">
+                <TextField.Input placeholder="Medium size" />
+            </TextField.Root>
+
+            <TextField.Root variant={'outlined'} size="lg">
+                <TextField.Input placeholder="Large size" />
+            </TextField.Root>
+        </div>
+    ),
+};
+
+// With Helper Text
+export const WithHelperText: Story = {
+    render: () => (
+        <div className="grv-space-y-4">
+            <TextField.Root variant={'outlined'}>
+                <TextField.Input placeholder="With helper text" />
+                <TextField.HelperText>
+                    This is a helpful message
+                </TextField.HelperText>
+            </TextField.Root>
+
+            <TextField.Root variant={'outlined'} error={true}>
+                <TextField.Input placeholder="With error" />
+                <TextField.HelperText>
+                    This field is required
+                </TextField.HelperText>
+            </TextField.Root>
+        </div>
+    ),
+};
+
+// Form Example
+export const FormExample: Story = {
+    render: () => (
+        <form className="grv-space-y-4 grv-max-w-md">
+            <TextField.Root variant="outlined">
+                <TextField.Icon position="start">
+                    <User className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+                <TextField.Input placeholder="Username" />
+                <TextField.Icon position="end">
+                    <Check className="grv-w-4 grv-h-4 grv-text-green-500" />
+                </TextField.Icon>
+                <TextField.HelperText>
+                    Username is available
+                </TextField.HelperText>
+            </TextField.Root>
+
+            <TextField.Root variant="outlined" error={true}>
+                <TextField.Icon position="start">
+                    <Mail className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+                <TextField.Input placeholder="Email" type="email" />
+                <TextField.HelperText>
+                    Please enter a valid email address
+                </TextField.HelperText>
+            </TextField.Root>
+
+            <TextField.Root variant="outlined">
+                <TextField.Icon position="start">
+                    <Lock className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+                <TextField.Input type="password" placeholder="Password" />
+                <TextField.HelperText>
+                    Must be at least 8 characters
+                </TextField.HelperText>
+            </TextField.Root>
+        </form>
+    ),
+};
+
+// Disabled State
+export const DisabledStates: Story = {
+    render: () => (
+        <div className="grv-space-y-4">
+            <TextField.Root>
+                <TextField.Input
+                    placeholder="Disabled input"
+                    disabled
+                />
+            </TextField.Root>
+
+            <TextField.Root variant="outlined">
+                <TextField.Icon position="start">
+                    <Mail className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+                <TextField.Input
+                    placeholder="Disabled with icons"
+                    disabled
+                />
+                <TextField.Icon position="end">
+                    <AlertCircle className="grv-w-4 grv-h-4" />
+                </TextField.Icon>
+            </TextField.Root>
+        </div>
+    ),
+};
