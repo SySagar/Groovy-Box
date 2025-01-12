@@ -1,5 +1,11 @@
 # @groovy-box/ui
 
+## 2.4.1
+
+### Patch Changes
+
+- 7484577: framer-motion animation
+
 ## 2.4.0
 
 ### Minor Changes
