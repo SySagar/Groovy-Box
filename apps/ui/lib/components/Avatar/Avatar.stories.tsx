@@ -1,6 +1,5 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { Avatar, AvatarImage, AvatarContent, AvatarFallback } from '../lib';
+import { Story } from '@storybook/react';
+import { Avatar, AvatarImage, AvatarContent, AvatarFallback } from './Avatar';
 import { Search, File } from 'lucide-react';
 
 export default {
@@ -10,7 +9,7 @@ export default {
   argTypes: {
     className: { control: 'text' },
   },
-} as Meta;
+};
 
 const Template: Story = (args) => (
   <Avatar {...args}>
@@ -54,13 +53,13 @@ export const WithContentIcon: Story = (args) => (
   </div>
 );
 
-export const WithFallback: Story = (args) => (
+export const WithFallback: Story = () => (
   <Avatar>
     <AvatarFallback>AB</AvatarFallback>
   </Avatar>
 );
 
-export const allSizes: Story = (args) => (
+export const allSizes: Story = () => (
   <div className="grv-flex grv-flex-row grv-w-full grv-item-center grv-justify-center grv-gap-16 grv-p-4">
     <Avatar size="small">
       <AvatarContent className="grv-bg-blue-500">

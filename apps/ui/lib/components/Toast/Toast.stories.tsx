@@ -1,7 +1,5 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { withGlobalStyles } from '../.storybook/decorator';
-import { useToast, Button, Toaster, ToastAction } from '../lib';
+import { withGlobalStyles } from '../../../.storybook/decorator';
+import { useToast, Button, Toaster, ToastAction } from '../..';
 
 export const Default = () => {
   const { toast } = useToast();
@@ -33,7 +31,7 @@ export default {
   title: 'components/Toast',
   component: Default,
   decorators: [withGlobalStyles],
-} as Meta;
+};
 
 export const Destructive = () => {
   const { toast } = useToast();

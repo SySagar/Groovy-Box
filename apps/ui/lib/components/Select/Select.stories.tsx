@@ -1,13 +1,5 @@
 // SelectDemo.stories.js
-
-import React from 'react';
-import {
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-} from '@radix-ui/react-icons';
-import { Check } from 'lucide-react';
-import { Meta, StoryObj } from '@storybook/react';
+import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 import {
   Select,
   SelectContent,
@@ -16,10 +8,9 @@ import {
   SelectLabel,
   SelectScrollDownButton,
   SelectScrollUpButton,
-  SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from '../lib'; // Import your custom Select component
+} from '../..'; // Import your custom Select component
 import { SelectIcon } from '@radix-ui/react-select';
 
 // type SelectComponentStory = StoryObj<typeof CustomSelect>;
@@ -35,7 +26,7 @@ const options = [
   { value: 'cabbage', label: 'Cabbage' },
 ];
 
-const Test = () => (
+const BasicSelect = () => (
   <div className="">
     <Select aria-label="Food">
       <SelectTrigger
@@ -61,8 +52,12 @@ const Test = () => (
           <SelectLabel className="bg-secondary-300 text-primaryText">
             Vegetables
           </SelectLabel>
-          {options.map((option: any) => (
-            <SelectItem className="text-primaryText" value={option.value}>
+          {options.map((option: any, index: number) => (
+            <SelectItem
+              key={index}
+              className="text-primaryText"
+              value={option.value}
+            >
               {option.label}
             </SelectItem>
           ))}
@@ -78,7 +73,7 @@ const Test = () => (
 
 export default {
   title: 'Components/Select',
-  component: Test,
-} as Meta;
+  component: BasicSelect,
+};
 
-export const Default = () => <Test />;
+export const Default = () => <BasicSelect />;

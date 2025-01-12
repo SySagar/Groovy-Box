@@ -1,7 +1,5 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { withGlobalStyles } from '../.storybook/decorator';
-import { Progress, Text } from '../lib';
+import { withGlobalStyles } from '../../../.storybook/decorator';
+import { Progress, Text } from '../..';
 
 const DefaultTemplate = ({ value = 40 }) => {
   return (
@@ -27,7 +25,7 @@ export default {
   title: 'components/Progress',
   component: DefaultTemplate,
   decorators: [withGlobalStyles],
-} as Meta;
+};
 
 export const Default = () => {
   return <DefaultTemplate />;

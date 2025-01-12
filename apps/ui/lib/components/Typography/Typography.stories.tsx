@@ -1,5 +1,4 @@
-import React from 'react';
-import { Text, TextProps } from '../lib';
+import { Text } from '../..';
 
 export default {
   title: 'Components/Text',
@@ -63,7 +62,7 @@ export default {
 };
 
 // Create a template for your Text component
-const Template = (args) => <Text {...args} />;
+const Template = (args: any) => <Text {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -214,7 +213,7 @@ export const withTailwind = () => {
 export const withTailwindAndVariant = () => {
   return (
     <div style={{ marginBottom: '20px' }}>
-      <Text variant="heading-1" className="text-error-700">
+      <Text variant="heading-1" className="grv-text-error-700">
         with tailwind classes and variant
       </Text>
     </div>

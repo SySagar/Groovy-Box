@@ -1,9 +1,8 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { withGlobalStyles } from '../.storybook/decorator';
+import { Story } from '@storybook/react';
+import { withGlobalStyles } from '../../../.storybook/decorator';
 
-import { Chip, ChipProps } from '../lib';
-import { Avatar, AvatarImage, AvatarFallback } from '../lib';
+import { Chip, ChipProps } from '../..';
+import { Avatar, AvatarImage, AvatarFallback } from '../..';
 import { Star, Mail } from 'lucide-react';
 
 const ChipExample = (props: ChipProps) => (
@@ -77,7 +76,7 @@ export default {
   title: 'components/Chip',
   component: ChipExample,
   decorators: [withGlobalStyles],
-} as Meta;
+};
 
 export const Default: Story<ChipProps> = (args) => <ChipExample {...args} />;
 Default.args = {

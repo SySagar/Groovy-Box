@@ -1,13 +1,11 @@
-import React from 'react';
-import { Meta } from '@storybook/react';
-import { Button } from '../lib';
-import { withGlobalStyles } from '../.storybook/decorator';
+import { Button } from './index';
+import { withGlobalStyles } from '../../../.storybook/decorator';
 
 export default {
   title: 'Components/Button',
   component: Button,
   decorators: [withGlobalStyles],
-} as Meta;
+};
 
 export const Variants = () => (
   <div
@@ -38,12 +36,8 @@ export const Variants = () => (
 );
 
 export const tailwindButton = () => {
-  return <Button className="bg-warning-500 text-secondaryText">Hello</Button>;
-};
-
-export const tailwindButtonWithOverridingVariant = () => {
   return (
-    <Button variant={'outline'} className="grv-bg-[#ff0f] grv-outline-[#1fa]">
+    <Button className="grv-bg-warning-700 grv-text-text-secondary hover:grv-bg-warning-500 grv-font-bold">
       Hello
     </Button>
   );

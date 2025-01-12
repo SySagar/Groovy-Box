@@ -1,16 +1,12 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuTrigger,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuLink,
   ListItem,
-} from '../lib';
+} from '../..';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -111,7 +107,7 @@ const Test = () => (
 export default {
   title: 'components/Navigation',
   component: Test,
-} as Meta;
+};
 
 export const Default = () => {
   return <Test />;

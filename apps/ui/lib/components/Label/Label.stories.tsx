@@ -1,7 +1,6 @@
-import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import { Label } from '../lib';
-import { withGlobalStyles } from '../.storybook/decorator';
+import { StoryObj } from '@storybook/react';
+import { Label } from '../..';
+import { withGlobalStyles } from '../../../.storybook/decorator';
 
 type LabelComponentStory = StoryObj<typeof Label>;
 
@@ -14,7 +13,7 @@ export default {
     htmlFor: { control: 'text' },
     children: { control: 'text' },
   },
-} as Meta<typeof Label>;
+};
 
 export const BasicLabelComponent: LabelComponentStory = {
   args: {
