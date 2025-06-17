@@ -61,6 +61,14 @@ none
     
 ![example workflow](https://github.com/SySagar/Groovy-Box/actions/workflows/build_and_publish.yml/badge.svg)
 [![codecov](https://codecov.io/gh/SySagar/Groovy-Box/branch/dev/graph/badge.svg?token=SW96J1IZIQ)](https://codecov.io/gh/SySagar/Groovy-Box)
+[<img alt="Static Badge" src="https://img.shields.io/badge/Benchmark-blue?link=left-https%3A%2F%2Fbundlephobia.com%2Fscan-results%3Fpackages%3D%40radix-ui%2Freact-avatar%401.0.4%2C%40radix-ui%2Freact-dialog%401.1.4%2C%40radix-ui%2Freact-icons%401.3.0%2C%40radix-ui%2Freact-select%402.0.0%2Cclass-variance-authority%400.7.0%2Cclassnames%402.5.1%2Cframer-motion%4011.17.0%2Clucide-react%400.377.0%2Cpostcss-prefix-selector%401.16.1%2Ctailwind-merge%402.3.0%2Ctailwindcss-scoped-preflight%403.4.4">](https://img.shields.io/bundlephobia/minzip/%40groovy-box%2Fui
+)
+
+[BenchMark](https://bundlephobia.com/scan-results?packages=@radix-ui/react-avatar@1.0.4,@radix-ui/react-dialog@1.1.4,@radix-ui/react-icons@1.3.0,@radix-ui/react-select@2.0.0,class-variance-authority@0.7.0,classnames@2.5.1,framer-motion@11.17.0,lucide-react@0.377.0,postcss-prefix-selector@1.16.1,tailwind-merge@2.3.0,tailwindcss-scoped-preflight@3.4.4)
+
+
+
+
 </div>
 
 ## Contributions
